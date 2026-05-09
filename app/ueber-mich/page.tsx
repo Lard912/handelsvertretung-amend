@@ -239,7 +239,7 @@ export default function UeberMichPage() {
 
   return (
     <main className="min-h-screen bg-[#f6f7fb] text-slate-900 selection:bg-[#145da0] selection:text-white">
-      <section className="relative isolate min-h-[90vh] overflow-hidden bg-[linear-gradient(135deg,#f8fbff_0%,#edf4fb_45%,#e6eef8_100%)] px-6 pb-16 pt-16 sm:pt-20 min-[1024px]:flex min-[1024px]:items-center min-[1024px]:pb-20 min-[1024px]:pt-10">
+      <section className="relative isolate min-h-[90vh] overflow-hidden bg-[linear-gradient(135deg,#f8fbff_0%,#edf4fb_45%,#e6eef8_100%)] px-4 pb-16 pt-16 sm:pt-20 min-[600px]:px-6 min-[1024px]:flex min-[1024px]:items-center min-[1024px]:pb-20 min-[1024px]:pt-10">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(20,93,160,0.12),transparent_28%),radial-gradient(circle_at_85%_20%,rgba(59,130,246,0.10),transparent_24%)]" />
         <div className="pointer-events-none absolute -left-8 top-20 h-56 w-56 rounded-full bg-[#145da0]/10 blur-3xl floating" />
         <div className="pointer-events-none absolute right-0 top-0 h-72 w-72 rounded-full bg-sky-300/20 blur-3xl floating-delayed" />
@@ -251,7 +251,7 @@ export default function UeberMichPage() {
             </p>
 
             <p
-              className="mt-6 text-5xl font-semibold leading-[0.98] tracking-tight text-[#145da0] sm:text-6xl xl:text-7xl"
+              className="mt-6 text-[2.35rem] font-semibold leading-[0.9] tracking-tight text-[#145da0] min-[600px]:text-5xl min-[600px]:leading-[0.98] sm:text-6xl xl:text-7xl"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Erfahrung, die
@@ -259,27 +259,30 @@ export default function UeberMichPage() {
               Vertrauen schafft.
             </p>
 
-            <p className="mt-7 w-full max-w-none text-lg leading-8 text-slate-600 sm:text-xl">
+            <p className="mt-7 w-full max-w-none text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8 sm:text-xl">
               Vom stationären Souvenirhandel bis zur langjährigen Handelsvertretung:
               Mein Weg ist geprägt von persönlicher Betreuung, Marktverständnis
               und einem klaren Blick für erfolgreiche Sortimente.
             </p>
 
-            <div className="mt-10 grid w-full gap-4 sm:grid-cols-3">
+            <div className="mt-7 grid w-full grid-cols-3 gap-3 sm:mt-10 sm:gap-4">
               {[
                 { value: "25+", label: "Jahre Erfahrung" },
                 { value: "100%", label: "Persönlich betreut" },
                 { value: "über 120", label: "zufriedene Kunden" },
               ].map((item) => (
-                <div key={item.label} className="rounded-[24px] bg-white px-5 py-4 shadow-sm">
+                <div
+  key={item.label}
+  className="rounded-[20px] bg-white px-4 py-3 shadow-sm sm:rounded-[24px] sm:px-5 sm:py-4"
+>
                   <div
-                    className="text-3xl font-semibold leading-tight text-[#145da0]"
+                    className="text-2xl font-semibold leading-none text-[#145da0] sm:text-3xl"
                     style={{ fontFamily: "var(--font-playfair)" }}
                   >
                     {item.value}
                   </div>
 
-                  <div className="mt-2 text-sm font-medium text-slate-500">
+                  <div className="mt-2 text-xs font-medium text-slate-500 min-[600px]:text-sm">
                     {item.label}
                   </div>
                 </div>
@@ -305,7 +308,7 @@ export default function UeberMichPage() {
                 </div>
               </div>
 
-              <div className="mt-4 grid grid-cols-4 gap-3">
+              <div className="mt-4 grid grid-cols-2 gap-3 min-[600px]:grid-cols-4">
                 {galleryImages.map((image, index) => {
                   const isActive = index === activeImage;
 
@@ -347,8 +350,8 @@ export default function UeberMichPage() {
         </div>
       </section>
 
-      <section
-        className="bg-[#145da0] px-6 py-24"
+<section
+  className="bg-[#145da0] px-4 py-24 min-[600px]:px-6"
         onTouchStart={handleArticleTouchStart}
         onTouchMove={handleArticleTouchMove}
         onTouchEnd={handleArticleTouchEnd}
@@ -388,18 +391,18 @@ export default function UeberMichPage() {
 
             <Reveal delay={120}>
               <div key={selectedArticleSlide.title} className="article-soft-fade">
-                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/75">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/75 min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
                   {selectedArticleSlide.eyebrow}
                 </p>
 
                 <h2
-                  className="mt-3 text-4xl font-semibold tracking-tight !text-white sm:text-5xl"
+                  className="mt-3 text-3xl font-semibold leading-[1.05] tracking-tight !text-white min-[600px]:text-4xl sm:text-5xl"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
                   {selectedArticleSlide.title}
                 </h2>
 
-                <div className="mt-8 space-y-7 text-lg leading-8 text-white/85">
+                <div className="mt-8 space-y-5 text-[15px] leading-[1.45] text-white/85 min-[600px]:space-y-7 min-[600px]:text-lg min-[600px]:leading-8">
                   {selectedArticleSlide.paragraphs.map((paragraph) => (
                     <p key={paragraph}>{paragraph}</p>
                   ))}
@@ -452,21 +455,21 @@ export default function UeberMichPage() {
         </div>
       </section>
 
-      <section className="bg-[#fcfcfd] px-6 py-24">
+      <section className="bg-[#fcfcfd] px-4 py-16 min-[600px]:px-6 md:py-20">
         <div className="mx-auto max-w-[1600px]">
           <Reveal className="mb-14 max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#145da0]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
               Werdegang
             </p>
 
             <h2
-              className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl"
+              className="mt-3 text-3xl font-semibold leading-[1.05] tracking-tight text-slate-900 min-[600px]:text-4xl sm:text-5xl"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Mein Weg in die Branche
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-slate-600">
+            <p className="mt-6 text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8">
               Keine statische Vita, sondern ein Weg mit Stationen, die bis heute
               meine Arbeit prägen. Klicken Sie sich durch den Verlauf.
             </p>
@@ -496,13 +499,13 @@ export default function UeberMichPage() {
                                 {item.category}
                               </div>
 
-                              <div className="mt-2 text-xl font-semibold text-slate-900">
+                              <div className="mt-2 text-lg font-semibold leading-tight text-slate-900 min-[600px]:text-xl">
                                 {item.title}
                               </div>
                             </div>
 
                             <div
-                              className={`text-sm font-semibold ${
+                              className={`text-xs font-semibold min-[600px]:text-sm ${
                                 isActive ? "text-[#145da0]" : "text-slate-500"
                               }`}
                             >
@@ -541,18 +544,18 @@ export default function UeberMichPage() {
                                 </div>
                               </div>
 
-                              <div className="mt-6 text-sm font-semibold uppercase tracking-[0.28em] !text-white/70">
+                              <div className="mt-6 text-xs font-semibold uppercase tracking-[0.22em] !text-white/70 min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
                                 {item.year}
                               </div>
 
                               <h3
-                                className="mt-3 text-3xl font-semibold leading-tight !text-white sm:text-4xl"
+                                className="mt-3 text-2xl font-semibold leading-[1.05] !text-white min-[600px]:text-3xl sm:text-4xl"
                                 style={{ fontFamily: "var(--font-playfair)" }}
                               >
                                 {item.title}
                               </h3>
 
-                              <p className="mt-6 whitespace-pre-line text-base leading-8 !text-white/85 sm:text-lg">
+                              <p className="mt-6 whitespace-pre-line text-[15px] leading-[1.45] !text-white/85 min-[600px]:text-base min-[600px]:leading-8 sm:text-lg">
                                 {item.detail}
                               </p>
                             </div>
@@ -602,27 +605,27 @@ export default function UeberMichPage() {
         </div>
       </section>
 
-      <section className="px-6 pb-24 pt-24">
+      <section className="px-4 bg-[#fcfcfd] pb-16 pt-0 min-[600px]:px-6 md:pb-20 md:pt-0">
         <div className="mx-auto max-w-[1600px]">
           <Reveal>
-            <div className="relative overflow-hidden rounded-[40px] bg-[linear-gradient(135deg,#0b2f52_0%,#145da0_55%,#1d74c9_100%)] px-8 py-14 text-white shadow-[0_24px_70px_rgba(20,93,160,0.24)] sm:px-12 sm:py-16">
+            <div className="relative overflow-hidden rounded-[40px] bg-[linear-gradient(135deg,#0b2f52_0%,#145da0_55%,#1d74c9_100%)] px-6 py-14 text-white shadow-[0_24px_70px_rgba(20,93,160,0.24)] min-[600px]:px-8 sm:px-12 sm:py-16">
               <div className="pointer-events-none absolute right-0 top-0 h-56 w-56 rounded-full bg-white/10 blur-3xl floating" />
               <div className="pointer-events-none absolute bottom-0 left-0 h-48 w-48 rounded-full bg-cyan-300/10 blur-3xl floating-delayed" />
 
               <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
                 <div className="max-w-3xl">
-                  <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/70">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/70 min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
                     Zusammenarbeit
                   </p>
 
                   <h2
-                    className="mt-3 text-4xl font-semibold tracking-tight !text-white sm:text-5xl"
+                    className="mt-3 text-3xl font-semibold leading-[1.05] tracking-tight !text-white min-[600px]:text-4xl sm:text-5xl"
                     style={{ fontFamily: "var(--font-playfair)" }}
                   >
                     Persönlich, erfahren und mit Blick auf den Markt.
                   </h2>
 
-                  <p className="mt-5 text-lg leading-8 text-white/80">
+                  <p className="mt-5 text-[15px] leading-[1.45] text-white/80 min-[600px]:text-lg min-[600px]:leading-8">
                     Wenn Sie jemanden suchen, der Produkte nicht nur vertreibt,
                     sondern Standorte, Zielgruppen und Sortimente wirklich versteht,
                     freue ich mich auf den Austausch.
@@ -632,7 +635,7 @@ export default function UeberMichPage() {
                 <div>
                   <a
                     href="/kontakt"
-                    className="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-4 text-sm font-semibold text-[#145da0] shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                    className="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-xs font-semibold text-[#145da0] shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl min-[600px]:px-6 min-[600px]:py-4 min-[600px]:text-sm"
                   >
                     Kontakt aufnehmen →
                   </a>

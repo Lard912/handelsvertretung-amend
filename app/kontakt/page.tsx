@@ -96,20 +96,20 @@ export default function KontaktPage() {
 
   return (
     <main className="min-h-screen bg-[#f6f7fb] text-slate-900 selection:bg-[#145da0] selection:text-white">
-      <section className="relative isolate flex min-h-[calc(100vh-80px)] items-start overflow-hidden bg-[#0d3b66] px-6 pb-24 pt-28 text-white sm:pt-32">
+      <section className="relative isolate flex min-h-[calc(100vh-80px)] items-start overflow-hidden bg-[#0d3b66] px-4 pb-16 pt-16 text-white min-[600px]:px-6 min-[600px]:pb-24 min-[600px]:pt-28 sm:pt-32 lg:items-center">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.16),transparent_24%),radial-gradient(circle_at_85%_20%,rgba(125,211,252,0.18),transparent_24%),linear-gradient(135deg,#0d3b66_0%,#145da0_55%,#1c7ed6_100%)]" />
         <div className="absolute -left-10 top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl floating" />
         <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-cyan-300/10 blur-3xl floating-delayed" />
         <div className="absolute bottom-0 left-1/3 h-40 w-40 rounded-full bg-sky-200/10 blur-3xl floating-slow" />
 
-        <div className="relative mx-auto grid w-full max-w-[1600px] gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <div className="relative mx-auto grid w-full max-w-[1600px] gap-8 min-[600px]:gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <Reveal className="max-w-4xl">
-            <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-white/80 backdrop-blur">
+            <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white/80 backdrop-blur min-[600px]:tracking-[0.28em]">
               Kontakt
             </p>
 
             <h1
-              className="mt-6 text-5xl font-semibold leading-[0.98] tracking-tight !text-white sm:text-6xl xl:text-7xl"
+              className="mt-6 text-[2.35rem] font-semibold leading-[0.9] tracking-tight !text-white min-[600px]:text-5xl min-[600px]:leading-[0.98] sm:text-6xl xl:text-7xl"
               style={{ fontFamily: "var(--font-playfair, serif)" }}
             >
               Nehmen Sie
@@ -117,13 +117,13 @@ export default function KontaktPage() {
               Kontakt auf.
             </h1>
 
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-white/80 sm:text-xl">
+            <p className="mt-7 max-w-2xl text-[15px] leading-[1.45] text-white/80 min-[600px]:text-lg min-[600px]:leading-8 sm:text-xl">
               Ich freue mich über Ihre Anfrage und ein erstes persönliches
               Gespräch. Ob Sortiment, Zusammenarbeit oder allgemeine Fragen –
               schreiben Sie mir gerne direkt.
             </p>
 
-            <div className="mt-10 grid max-w-2xl gap-3 sm:grid-cols-3">
+            <div className="mt-8 grid max-w-2xl grid-cols-3 gap-3 min-[600px]:mt-10 min-[600px]:gap-4">
               {[
                 { value: "Direkt", label: "Persönlicher Kontakt" },
                 { value: "Schnell", label: "Kurze Wege" },
@@ -131,16 +131,16 @@ export default function KontaktPage() {
               ].map((item, i) => (
                 <div
                   key={item.label}
-                  className="glass-card rounded-3xl px-5 py-4"
+                  className="glass-card rounded-2xl px-4 py-3 min-[600px]:rounded-3xl min-[600px]:px-5 min-[600px]:py-4"
                   style={{ animationDelay: `${i * 120}ms` }}
                 >
                   <div
-  className="text-3xl font-semibold leading-tight text-white"
-  style={{ fontFamily: "var(--font-playfair)" }}
->
+                    className="text-xl font-semibold leading-none text-white min-[600px]:text-3xl min-[600px]:leading-tight"
+                    style={{ fontFamily: "var(--font-playfair)" }}
+                  >
                     {item.value}
                   </div>
-                  <div className="mt-2 text-sm font-medium text-white/70">
+                  <div className="mt-1 text-xs font-medium leading-tight text-white/70 min-[600px]:mt-2 min-[600px]:text-sm">
                     {item.label}
                   </div>
                 </div>
@@ -150,71 +150,73 @@ export default function KontaktPage() {
 
           <Reveal delay={150}>
             <div className="relative ml-auto w-full max-w-2xl">
-              <div className="absolute inset-0 rounded-[38px] bg-white/10 blur-2xl" />
-              <div className="relative rounded-[38px] border border-white/15 bg-white/10 p-5 shadow-[0_24px_70px_rgba(20,93,160,0.22)] backdrop-blur-xl">
+              <div className="absolute inset-0 rounded-[32px] bg-white/10 blur-2xl min-[600px]:rounded-[38px]" />
+
+              <div className="relative rounded-[32px] border border-white/15 bg-white/10 p-3 shadow-[0_24px_70px_rgba(20,93,160,0.22)] backdrop-blur-xl min-[600px]:rounded-[38px] min-[600px]:p-5">
                 <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-cyan-200/20 blur-2xl floating-slow" />
 
-                <div className="rounded-[30px] bg-white/95 p-8 text-slate-900 sm:p-10">
-                  <div className="mb-6 flex items-center justify-between">
+                <div className="rounded-[26px] bg-white/95 p-5 text-slate-900 min-[600px]:rounded-[30px] min-[600px]:p-8 sm:p-10">
+                  <div className="mb-6 flex items-start justify-between gap-3">
                     <div>
-                      <p className="text-xs uppercase tracking-[0.28em] text-[#145da0]">
+                      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] min-[600px]:tracking-[0.28em]">
                         Direktkontakt
                       </p>
                       <h2
-                        className="mt-2 text-3xl font-semibold"
+                        className="mt-2 text-2xl font-semibold leading-tight min-[600px]:text-3xl"
                         style={{ fontFamily: "var(--font-playfair, serif)" }}
                       >
                         Schnell erreichbar
                       </h2>
                     </div>
-                    <div className="rounded-2xl bg-[#145da0]/10 px-3 py-2 text-sm font-semibold text-[#145da0]">
+
+                    <div className="rounded-2xl bg-[#145da0]/10 px-3 py-2 text-xs font-semibold text-[#145da0] min-[600px]:text-sm">
                       Persönlich
                     </div>
                   </div>
 
-                  <div className="grid gap-5 sm:grid-cols-2">
+                  <div className="grid gap-4 min-[600px]:gap-5 sm:grid-cols-2">
                     <a
                       href={`tel:${contactData.phone.replace(/\s+/g, "")}`}
-                      className="feature-card group rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:border-[#145da0]/30 hover:shadow-lg"
+                      className="feature-card group rounded-[22px] border border-slate-200 bg-white p-4 shadow-sm transition duration-300 hover:border-[#145da0]/30 hover:shadow-lg min-[600px]:rounded-[24px] min-[600px]:p-5"
                     >
-                      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0]">
+                      <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[#145da0] min-[600px]:tracking-[0.22em]">
                         Telefon
                       </div>
-                      <div className="mt-3 text-lg font-semibold text-slate-900 transition group-hover:text-[#145da0]">
+                      <div className="mt-3 text-[15px] font-semibold leading-tight text-slate-900 transition group-hover:text-[#145da0] min-[600px]:text-lg">
                         {contactData.phone}
                       </div>
-                      <div className="mt-2 text-sm text-slate-500">
+                      <div className="mt-2 text-xs text-slate-500 min-[600px]:text-sm">
                         Direkt anrufen
                       </div>
                     </a>
 
                     <a
                       href={`mailto:${contactData.email}`}
-                      className="feature-card group rounded-[24px] border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:border-[#145da0]/30 hover:shadow-lg"
+                      className="feature-card group rounded-[22px] border border-slate-200 bg-white p-4 shadow-sm transition duration-300 hover:border-[#145da0]/30 hover:shadow-lg min-[600px]:rounded-[24px] min-[600px]:p-5"
                       style={{ animationDelay: "120ms" }}
                     >
-                      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0]">
+                      <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[#145da0] min-[600px]:tracking-[0.22em]">
                         E-Mail
                       </div>
-                      <div className="mt-3 break-all text-lg font-semibold text-slate-900 transition group-hover:text-[#145da0]">
+                      <div className="mt-3 break-all text-[15px] font-semibold leading-tight text-slate-900 transition group-hover:text-[#145da0] min-[600px]:text-lg">
                         {contactData.email}
                       </div>
-                      <div className="mt-2 text-sm text-slate-500">
+                      <div className="mt-2 text-xs text-slate-500 min-[600px]:text-sm">
                         Nachricht senden
                       </div>
                     </a>
 
                     <div
-                      className="feature-card rounded-[24px] border border-slate-200 bg-slate-50 p-5 shadow-sm sm:col-span-2 transition duration-300 hover:border-[#145da0]/20 hover:bg-white hover:shadow-md"
+                      className="feature-card rounded-[22px] border border-slate-200 bg-slate-50 p-4 shadow-sm transition duration-300 hover:border-[#145da0]/20 hover:bg-white hover:shadow-md min-[600px]:rounded-[24px] min-[600px]:p-5 sm:col-span-2"
                       style={{ animationDelay: "240ms" }}
                     >
-                      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0]">
+                      <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[#145da0] min-[600px]:tracking-[0.22em]">
                         Einsatzgebiet
                       </div>
-                      <div className="mt-3 text-lg font-semibold text-slate-900">
+                      <div className="mt-3 text-[15px] font-semibold leading-tight text-slate-900 min-[600px]:text-lg">
                         {contactData.region}
                       </div>
-                      <div className="mt-2 text-sm text-slate-500">
+                      <div className="mt-2 text-xs leading-[1.45] text-slate-500 min-[600px]:text-sm">
                         Persönliche Betreuung vor Ort und direkter Austausch
                       </div>
                     </div>
@@ -226,91 +228,72 @@ export default function KontaktPage() {
         </div>
       </section>
 
-      <section className="bg-[#f6f7fb] px-6 py-24">
+      <section className="bg-[#fcfcfd]  px-4 py-16 min-[600px]:px-6 md:py-20">
         <div className="mx-auto max-w-[1600px]">
-          <div className="grid items-stretch gap-8 xl:grid-cols-[0.9fr_1.1fr]">
+          <div className="grid items-stretch gap-6 min-[600px]:gap-8 xl:grid-cols-[0.9fr_1.1fr]">
             <Reveal className="h-full">
-              <div className="flex h-full flex-col rounded-[34px] border border-white/70 bg-white p-8 shadow-[0_18px_50px_rgba(15,23,42,0.06)] sm:p-10">
-                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#145da0]">
+              <div className="flex h-full flex-col rounded-[28px] border border-white/70 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.06)] min-[600px]:rounded-[34px] min-[600px]:p-8 sm:p-10">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
                   Kontaktdaten
                 </p>
 
                 <h2
-                  className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl"
+                  className="mt-3 text-3xl font-semibold leading-[1.05] tracking-tight text-slate-900 min-[600px]:text-4xl sm:text-5xl"
                   style={{ fontFamily: "var(--font-playfair, serif)" }}
                 >
                   So erreichen Sie mich
                 </h2>
 
-                <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+                <p className="mt-5 max-w-2xl text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8">
                   Von Montag bis Freitag von 8:00–18:00 Uhr verfügbar
                 </p>
 
-                <div className="mt-10 space-y-6">
-                  <div className="feature-card rounded-[24px] border border-slate-200 bg-slate-50 px-5 py-5 transition duration-300 hover:border-[#145da0]/20 hover:bg-white hover:shadow-md">
-                    <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-                      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] md:min-w-[140px]">
-                        Name
-                      </div>
-                      <div className="text-left text-xl font-semibold text-slate-900 md:flex-1 md:text-right">
-                        {contactData.name}
+                <div className="mt-8 space-y-4 min-[600px]:mt-10 min-[600px]:space-y-6">
+                  {[
+                    { label: "Name", value: contactData.name, href: null },
+                    { label: "Firma", value: contactData.company, href: null },
+                    {
+                      label: "Telefon",
+                      value: contactData.phone,
+                      href: `tel:${contactData.phone.replace(/\s+/g, "")}`,
+                    },
+                    {
+                      label: "E-Mail",
+                      value: contactData.email,
+                      href: `mailto:${contactData.email}`,
+                    },
+                  ].map((item, index) => (
+                    <div
+                      key={item.label}
+                      className="feature-card rounded-[22px] border border-slate-200 bg-slate-50 px-4 py-4 transition duration-300 hover:border-[#145da0]/20 hover:bg-white hover:shadow-md min-[600px]:rounded-[24px] min-[600px]:px-5 min-[600px]:py-5"
+                      style={{ animationDelay: `${index * 100}ms` }}
+                    >
+                      <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+                        <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[#145da0] md:min-w-[140px]">
+                          {item.label}
+                        </div>
+
+                        {item.href ? (
+                          <a
+                            href={item.href}
+                            className="break-all text-left text-[15px] font-semibold leading-tight text-slate-900 transition hover:text-[#145da0] min-[600px]:text-xl md:flex-1 md:text-right"
+                          >
+                            {item.value}
+                          </a>
+                        ) : (
+                          <div className="text-left text-[15px] font-semibold leading-tight text-slate-900 min-[600px]:text-xl md:flex-1 md:text-right">
+                            {item.value}
+                          </div>
+                        )}
                       </div>
                     </div>
-                  </div>
+                  ))}
 
-                  <div
-                    className="feature-card rounded-[24px] border border-slate-200 bg-slate-50 px-5 py-5 transition duration-300 hover:border-[#145da0]/20 hover:bg-white hover:shadow-md"
-                    style={{ animationDelay: "100ms" }}
-                  >
-                    <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-                      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] md:min-w-[140px]">
-                        Firma
-                      </div>
-                      <div className="text-left text-xl font-semibold text-slate-900 md:flex-1 md:text-right">
-                        {contactData.company}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    className="feature-card rounded-[24px] border border-slate-200 bg-slate-50 px-5 py-5 transition duration-300 hover:border-[#145da0]/20 hover:bg-white hover:shadow-md"
-                    style={{ animationDelay: "200ms" }}
-                  >
-                    <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-                      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] md:min-w-[140px]">
-                        Telefon
-                      </div>
-                      <a
-                        href={`tel:${contactData.phone.replace(/\s+/g, "")}`}
-                        className="text-left text-xl font-semibold text-slate-900 transition hover:text-[#145da0] md:flex-1 md:text-right"
-                      >
-                        {contactData.phone}
-                      </a>
-                    </div>
-                  </div>
-
-                  <div
-                    className="feature-card rounded-[24px] border border-slate-200 bg-slate-50 px-5 py-5 transition duration-300 hover:border-[#145da0]/20 hover:bg-white hover:shadow-md"
-                    style={{ animationDelay: "300ms" }}
-                  >
-                    <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-                      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] md:min-w-[140px]">
-                        E-Mail
-                      </div>
-                      <a
-                        href={`mailto:${contactData.email}`}
-                        className="break-all text-left text-xl font-semibold text-slate-900 transition hover:text-[#145da0] md:flex-1 md:text-right"
-                      >
-                        {contactData.email}
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-wrap gap-3">
+                  <div className="grid gap-3 min-[420px]:grid-cols-2">
                     <button
                       type="button"
                       onClick={downloadVCard}
-                      className="inline-flex items-center justify-center rounded-2xl bg-[#145da0] px-6 py-3.5 font-semibold text-white shadow-lg transition duration-300 hover:bg-[#0f4c86] hover:shadow-xl"
+                      className="inline-flex items-center justify-center rounded-2xl bg-[#145da0] px-5 py-3 text-xs font-semibold text-white shadow-lg transition duration-300 hover:bg-[#0f4c86] hover:shadow-xl min-[600px]:px-6 min-[600px]:py-3.5 min-[600px]:text-base"
                     >
                       Kontakt speichern
                     </button>
@@ -318,7 +301,7 @@ export default function KontaktPage() {
                     <button
                       type="button"
                       onClick={() => setQrModalOpen(true)}
-                      className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-6 py-3.5 font-semibold text-slate-900 shadow-sm transition duration-300 hover:border-[#145da0]/25 hover:text-[#145da0] hover:shadow-md"
+                      className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-5 py-3 text-xs font-semibold text-slate-900 shadow-sm transition duration-300 hover:border-[#145da0]/25 hover:text-[#145da0] hover:shadow-md min-[600px]:px-6 min-[600px]:py-3.5 min-[600px]:text-base"
                     >
                       QR-Code scannen
                     </button>
@@ -328,99 +311,102 @@ export default function KontaktPage() {
             </Reveal>
 
             <Reveal delay={120} className="h-full">
-              <div className="flex h-full flex-col rounded-[34px] border border-white/70 bg-white p-8 shadow-[0_18px_50px_rgba(15,23,42,0.06)] sm:p-10">
-                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#145da0]">
+              <div className="flex h-full flex-col rounded-[28px] border border-white/70 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.06)] min-[600px]:rounded-[34px] min-[600px]:p-8 sm:p-10">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
                   Anfrage
                 </p>
 
                 <h2
-                  className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl"
+                  className="mt-3 text-3xl font-semibold leading-[1.05] tracking-tight text-slate-900 min-[600px]:text-4xl sm:text-5xl"
                   style={{ fontFamily: "var(--font-playfair, serif)" }}
                 >
                   Schreiben Sie mir
                 </h2>
 
-                <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+                <p className="mt-5 max-w-2xl text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8">
                   Nutzen Sie das Formular für Ihre Anfrage. Ich melde mich so
                   schnell wie möglich persönlich bei Ihnen zurück.
                 </p>
 
-<div className="mt-10 flex flex-1 flex-col justify-between rounded-[28px] border border-slate-200 bg-slate-50 p-6 sm:p-8">
-  <div>
-    <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0]">
-      Direkte Anfrage
-    </div>
+                <div className="mt-8 flex flex-1 flex-col justify-between rounded-[24px] border border-slate-200 bg-slate-50 p-5 min-[600px]:mt-10 min-[600px]:rounded-[28px] min-[600px]:p-6 sm:p-8">
+                  <div>
+                    <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[#145da0] min-[600px]:tracking-[0.22em]">
+                      Direkte Anfrage
+                    </div>
 
-    <h3
-      className="mt-3 text-3xl font-semibold text-slate-900"
-      style={{ fontFamily: "var(--font-playfair, serif)" }}
-    >
-      Schreiben Sie mir direkt per E-Mail.
-    </h3>
+                    <h3
+                      className="mt-3 text-2xl font-semibold leading-[1.05] text-slate-900 min-[600px]:text-3xl"
+                      style={{ fontFamily: "var(--font-playfair, serif)" }}
+                    >
+                      Schreiben Sie mir direkt per E-Mail.
+                    </h3>
 
-    <p className="mt-5 text-lg leading-8 text-slate-600">
-      Für Anfragen zu Sortiment, Zusammenarbeit oder allgemeinen Fragen erreichen
-      Sie mich am schnellsten per E-Mail oder Telefon.
-    </p>
+                    <p className="mt-5 text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8">
+                      Für Anfragen zu Sortiment, Zusammenarbeit oder allgemeinen
+                      Fragen erreichen Sie mich am schnellsten per E-Mail oder
+                      Telefon.
+                    </p>
 
-    <div className="mt-8 grid gap-4">
-      <a
-        href={`mailto:${contactData.email}?subject=Anfrage%20über%20die%20Webseite`}
-        className="inline-flex items-center justify-center rounded-2xl bg-[#145da0] px-6 py-3.5 font-semibold text-white shadow-lg transition duration-300 hover:bg-[#0f4c86] hover:shadow-xl"
-      >
-        E-Mail schreiben →
-      </a>
+                    <div className="mt-6 grid gap-3 min-[600px]:mt-8 min-[600px]:gap-4">
+                      <a
+                        href={`mailto:${contactData.email}?subject=Anfrage%20über%20die%20Webseite`}
+                        className="inline-flex items-center justify-center rounded-2xl bg-[#145da0] px-5 py-3 text-xs font-semibold text-white shadow-lg transition duration-300 hover:bg-[#0f4c86] hover:shadow-xl min-[600px]:px-6 min-[600px]:py-3.5 min-[600px]:text-base"
+                      >
+                        E-Mail schreiben →
+                      </a>
 
-      <a
-        href={`tel:${contactData.phone.replace(/\s+/g, "")}`}
-        className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-6 py-3.5 font-semibold text-slate-900 shadow-sm transition duration-300 hover:border-[#145da0]/25 hover:text-[#145da0] hover:shadow-md"
-      >
-        Jetzt anrufen
-      </a>
-    </div>
-  </div>
+                      <a
+                        href={`tel:${contactData.phone.replace(/\s+/g, "")}`}
+                        className="inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-5 py-3 text-xs font-semibold text-slate-900 shadow-sm transition duration-300 hover:border-[#145da0]/25 hover:text-[#145da0] hover:shadow-md min-[600px]:px-6 min-[600px]:py-3.5 min-[600px]:text-base"
+                      >
+                        Jetzt anrufen
+                      </a>
+                    </div>
+                  </div>
 
-  <div className="mt-10 rounded-2xl bg-white px-5 py-4 text-sm leading-6 text-slate-500">
-    Hinweis: Beim Klick auf „E-Mail schreiben“ öffnet sich Ihr E-Mail-Programm.
-  </div>
-</div>
+                  <div className="mt-8 rounded-2xl bg-white px-4 py-3 text-xs leading-[1.45] text-slate-500 min-[600px]:mt-10 min-[600px]:px-5 min-[600px]:py-4 min-[600px]:text-sm min-[600px]:leading-6">
+                    Hinweis: Beim Klick auf „E-Mail schreiben“ öffnet sich Ihr
+                    E-Mail-Programm.
+                  </div>
+                </div>
               </div>
             </Reveal>
           </div>
         </div>
       </section>
 
-      <section className="bg-white px-6 py-24">
+      <section className="bg-[#fcfcfd]  px-4 pb-16 pt-1.5 min-[600px]:px-6 min-[600px]:pt-4 md:pb-20"> 
         <div className="mx-auto max-w-[1600px]">
-          <Reveal className="mb-12 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#145da0]">
+          <Reveal className="mb-10 text-center min-[600px]:mb-12">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
               Standort
             </p>
 
             <h2
-              className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl"
+              className="mt-3 text-3xl font-semibold leading-[1.05] tracking-tight text-slate-900 min-[600px]:text-4xl sm:text-5xl"
               style={{ fontFamily: "var(--font-playfair, serif)" }}
             >
               Hier finden Sie mich
             </h2>
 
-            <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-600">
+            <p className="mx-auto mt-4 max-w-3xl text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8">
               {contactData.addressLine1}, {contactData.addressLine2}
             </p>
           </Reveal>
 
           <Reveal delay={100}>
-            <div className="overflow-hidden rounded-[34px] border border-slate-200 bg-white p-3 shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition duration-300 hover:shadow-[0_25px_70px_rgba(15,23,42,0.12)]">
-              <div className="overflow-hidden rounded-[26px]">
+            <div className="overflow-hidden rounded-[28px] border border-slate-200 bg-white p-2 shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition duration-300 hover:shadow-[0_25px_70px_rgba(15,23,42,0.12)] min-[600px]:rounded-[34px] min-[600px]:p-3">
+              <div className="overflow-hidden rounded-[22px] min-[600px]:rounded-[26px]">
                 <iframe
                   src="https://www.google.com/maps?q=Wilhelm-Herz-Stra%C3%9Fe%20105,%2068766%20Hockenheim&output=embed"
                   width="100%"
-                  height="500"
+                  height="420"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Standort Handelsvertretung Amend"
+                  className="min-[600px]:h-[500px]"
                 />
               </div>
             </div>
@@ -428,47 +414,51 @@ export default function KontaktPage() {
         </div>
       </section>
 
-      <section className="px-6 pb-24 pt-16">
+      <section className="px-4 bg-[#fcfcfd] pb-16 pt-0 min-[600px]:px-6 min-[600px]:pt-4 md:pb-20">
         <div className="mx-auto max-w-[1600px]">
           <Reveal>
-            <div className="relative overflow-hidden rounded-[40px] bg-[linear-gradient(135deg,#0b2f52_0%,#145da0_55%,#1d74c9_100%)] px-8 py-14 text-white shadow-[0_24px_70px_rgba(20,93,160,0.24)] sm:px-12 sm:py-16">
+            <div className="relative overflow-hidden rounded-[30px] bg-[linear-gradient(135deg,#0b2f52_0%,#145da0_55%,#1d74c9_100%)] px-6 py-10 text-white shadow-[0_24px_70px_rgba(20,93,160,0.24)] min-[600px]:rounded-[40px] min-[600px]:px-8 min-[600px]:py-14 sm:px-12 sm:py-16">
               <div className="absolute right-0 top-0 h-56 w-56 rounded-full bg-white/10 blur-3xl floating" />
               <div className="absolute bottom-0 left-0 h-48 w-48 rounded-full bg-cyan-300/10 blur-3xl floating-delayed" />
 
-              <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+              <div className="relative  grid gap-6 min-[600px]:gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
                 <div className="max-w-3xl">
-                  <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/70">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/70 min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
                     Austausch
                   </p>
+
                   <h2
-                    className="mt-3 text-4xl font-semibold tracking-tight !text-white sm:text-5xl"
+                    className="mt-3 text-3xl font-semibold leading-[1.05] tracking-tight !text-white min-[600px]:text-4xl sm:text-5xl"
                     style={{ fontFamily: "var(--font-playfair, serif)" }}
                   >
                     Ich freue mich auf Ihre Nachricht.
                   </h2>
-                  <p className="mt-5 text-lg leading-8 !text-white/80">
+
+                  <p className="mt-5 text-[15px] leading-[1.45] !text-white/80 min-[600px]:text-lg min-[600px]:leading-8">
                     Ob erste Anfrage, konkretes Sortiment oder persönliche
                     Zusammenarbeit – melden Sie sich gerne direkt.
                   </p>
                 </div>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="grid gap-3 min-[420px]:grid-cols-2 lg:flex lg:flex-wrap">
                   <a
                     href={`tel:${contactData.phone.replace(/\s+/g, "")}`}
-                    className="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-4 text-sm font-semibold text-[#145da0] shadow-xl transition duration-300 hover:shadow-2xl"
+                    className="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-xs font-semibold text-[#145da0] shadow-xl transition duration-300 hover:shadow-2xl min-[600px]:px-6 min-[600px]:py-4 min-[600px]:text-sm"
                   >
                     Jetzt anrufen
                   </a>
+
                   <a
                     href={`mailto:${contactData.email}`}
-                    className="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/10 px-6 py-4 text-sm font-semibold text-white backdrop-blur transition duration-300 hover:bg-white/15"
+                    className="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/10 px-5 py-3 text-xs font-semibold text-white backdrop-blur transition duration-300 hover:bg-white/15 min-[600px]:px-6 min-[600px]:py-4 min-[600px]:text-sm"
                   >
                     E-Mail senden
                   </a>
+
                   <button
                     type="button"
                     onClick={downloadVCard}
-                    className="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/10 px-6 py-4 text-sm font-semibold text-white backdrop-blur transition duration-300 hover:bg-white/15"
+                    className="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/10 px-5 py-3 text-xs font-semibold text-white backdrop-blur transition duration-300 hover:bg-white/15 min-[420px]:col-span-2 min-[600px]:px-6 min-[600px]:py-4 min-[600px]:text-sm lg:col-span-1"
                   >
                     Kontakt speichern
                   </button>
@@ -493,17 +483,17 @@ export default function KontaktPage() {
             <button
               type="button"
               onClick={() => setQrModalOpen(false)}
-              className="absolute right-4 top-4 z-20 flex h-11 w-11 items-center justify-center rounded-full bg-slate-100 text-xl font-semibold text-slate-700 transition hover:bg-slate-200"
+              className="absolute -right-2 -top-2 z-20 flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-base font-semibold text-slate-700 shadow-md transition hover:bg-slate-200 min-[600px]:h-9 min-[600px]:w-9"
               aria-label="QR-Code schließen"
             >
               ×
             </button>
 
-            <div className="flex min-h-[320px] items-center justify-center rounded-[24px] bg-[#f8f8f7] p-4 sm:p-6">
+            <div className="flex min-h-[320px] items-center justify-center rounded-[24px] bg-[#f8f8f7] p-2 min-[600px]:p-4 sm:p-6">
               <img
                 src="/qr_code.png"
                 alt="QR-Code"
-                className="block max-h-[76vh] max-w-full object-contain select-none"
+                className="block max-h-[76vh] max-w-full select-none object-contain"
               />
             </div>
           </div>
@@ -589,6 +579,10 @@ export default function KontaktPage() {
         }
 
         @media (prefers-reduced-motion: reduce) {
+          html {
+            scroll-behavior: auto;
+          }
+
           .reveal,
           .glass-card,
           .feature-card,

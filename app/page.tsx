@@ -116,25 +116,25 @@ export default function Home() {
 
   return (
     <>
-<section className="relative overflow-hidden bg-[linear-gradient(135deg,#0d3b66_0%,#145da0_60%,#1c7ed6_100%)] py-20 text-white md:min-h-[calc(100vh-88px)] md:flex md:items-center">
+<section className="relative overflow-hidden bg-[linear-gradient(135deg,#0d3b66_0%,#145da0_60%,#1c7ed6_100%)] py-12 text-white min-[600px]:py-20 md:min-h-[calc(100vh-88px)] md:flex md:items-center">
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.10),transparent_22%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.08),transparent_18%),radial-gradient(circle_at_50%_100%,rgba(56,189,248,0.18),transparent_24%)]" />
   <div className="absolute -left-10 top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl floating" />
   <div className="absolute right-0 top-10 h-72 w-72 rounded-full bg-cyan-300/10 blur-3xl floating-delayed" />
 
-<div className="relative w-full px-6 min-[1648px]:mx-auto min-[1648px]:w-[1600px] min-[1648px]:px-0 grid items-center gap-6 md:gap-10 md:grid-cols-[1.05fr_0.95fr] lg:gap-14 md:-mt-10">    <Reveal>
+<div className="relative grid w-full items-center gap-6 px-4 min-[600px]:px-6 min-[1648px]:mx-auto min-[1648px]:w-[1600px] min-[1648px]:px-0 md:-mt-10 md:grid-cols-[1.05fr_0.95fr] md:gap-10 lg:gap-14">    <Reveal>
       <div className="max-w-3xl">
         <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-white/80 backdrop-blur">
           seit 2000
         </p>
 <p
-  className="mt-6 text-5xl font-semibold leading-[0.98] tracking-tight text-[#fff] sm:text-6xl xl:text-7xl"
+  className="mt-6 text-[2.35rem] font-semibold leading-[0.9] tracking-tight text-[#fff] min-[600px]:text-5xl sm:text-6xl xl:text-7xl"
   style={{ fontFamily: "var(--font-playfair)" }}
 >
   Vertrieb mit Erfahrung <br />
   und Verlässlichkeit.
 </p>
 
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-white/85 sm:text-xl">
+        <p className="mt-6 max-w-2xl text-[15px] leading-[1.45] text-white/85 min-[600px]:text-lg min-[600px]:leading-8 sm:text-xl">
           Ich begleite meine Partner in der Souvenirbranche mit persönlicher
           Betreuung, langjähriger Erfahrung und einem klaren Blick für Produkte und
           Standorte.
@@ -143,14 +143,14 @@ export default function Home() {
         <div className="mt-10 flex flex-wrap gap-4">
           <a
             href="/vertretungen"
-            className="inline-flex items-center rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-[#145da0] shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+            className="inline-flex items-center rounded-2xl bg-white px-5 py-2.5 text-xs font-semibold text-[#145da0] shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl min-[600px]:px-6 min-[600px]:py-3 min-[600px]:text-sm"
           >
             Mehr erfahren
           </a>
 
           <Link
             href="/kontakt"
-            className="inline-flex items-center rounded-2xl border border-white/25 bg-white/12 px-6 py-3 text-sm font-semibold text-white shadow-lg backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/20"
+            className="inline-flex items-center rounded-2xl border border-white/25 bg-white/12 px-5 py-2.5 text-xs font-semibold text-white shadow-lg backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/20 min-[600px]:px-6 min-[600px]:py-3 min-[600px]:text-sm"
           >
             Kontakt
           </Link>
@@ -188,22 +188,22 @@ export default function Home() {
 </section>
 
 
-      <section id="partner" className="bg-[#f6f7fb] px-6 py-24">
+      <section id="partner" className="bg-[#f6f7fb] px-4 py-24 min-[600px]:px-6">
         <div className="mx-auto max-w-[1600px]">
           <Reveal>
             <div className="mb-16">
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#145da0]">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
                 Aktuelle Vertretungen
               </p>
 
               <h2
-                className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl"
+                className="mt-3 text-3xl font-semibold leading-[1.05] tracking-tight text-slate-900 min-[600px]:text-4xl sm:text-5xl"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
                 Meine Partner
               </h2>
 
-              <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">
+              <p className="mt-5 max-w-3xl text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8">
                 Zuverlässige Partnerschaften mit einem Sortiment, das auf
                 Märkte, Standorte und Verkaufschancen abgestimmt ist.
               </p>
@@ -270,19 +270,19 @@ export default function Home() {
                           {partner.title}
                         </h3>
 
-                        <p
-                          className={`mt-4 leading-7 ${
-                            isBlueCard
-                              ? "text-center text-white/90 md:text-left lg:text-center"
-                              : "text-center text-slate-600"
-                          }`}
-                        >
+<p
+  className={`mt-4 text-[15px] leading-[1.45] min-[600px]:leading-7 ${
+    isBlueCard
+      ? "text-center text-white/90 md:text-left lg:text-center"
+      : "text-center text-slate-600"
+  }`}
+>
                           {partner.short}
                         </p>
 
                         <div className="mt-5">
                           <div
-                            className={`rounded-2xl px-4 py-4 text-sm leading-7 ${
+                            className={`rounded-2xl px-4 py-4 text-xs leading-[1.45] min-[600px]:text-sm min-[600px]:leading-7 ${
                               isBlueCard
                                 ? "bg-white/10 text-white/90"
                                 : "bg-slate-50 text-slate-600"
@@ -301,28 +301,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="profil" className="bg-white px-6 py-24">
+      <section id="profil" className="bg-white px-4 py-24 min-[600px]:px-6">
         <div className="mx-auto grid max-w-[1600px] gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <Reveal>
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#145da0]">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
                 Profil
               </p>
               <h2
-                className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl"
+                className="mt-3 text-3xl font-semibold leading-[1.05] tracking-tight text-slate-900 min-[600px]:text-4xl sm:text-5xl"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
                 Erfahrung, Verlässlichkeit und persönlicher Kontakt
               </h2>
 
-              <p className="mt-6 text-lg leading-8 text-slate-600">
+              <p className="mt-6 text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8">
                 Seit vielen Jahren bin ich als Handelsvertreter in der
                 Souvenirbranche tätig. Dabei stehen für mich <strong>Vertrauen,
                 Verbindlichkeit und eine enge Zusammenarbeit mit meinen Partnern </strong>
                 im Mittelpunkt.
               </p>
 
-              <p className="mt-4 text-lg leading-8 text-slate-600">
+              <p className="mt-4 text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8">
                 Mein Anspruch ist es, Produkte nicht nur zu vermitteln, sondern
                 gemeinsam passende Sortimente, Märkte und Chancen zu erkennen und
                 langfristig zu entwickeln.
@@ -340,42 +340,42 @@ export default function Home() {
           </Reveal>
 
           <Reveal delay={120}>
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div className="rounded-[28px] border border-slate-200 bg-[#f8f8f7] p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div className="grid gap-4 sm:grid-cols-2 min-[600px]:gap-6">
+              <div className="rounded-[22px] border border-slate-200 bg-[#f8f8f7] p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg min-[600px]:rounded-[28px] min-[600px]:p-8">
                 <div
-                  className="text-4xl font-semibold text-[#145da0]"
+                  className="text-3xl font-semibold leading-none text-[#145da0] min-[600px]:text-4xl"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
                   25+
                 </div>
-                <div className="mt-2 text-lg font-semibold">Jahre Erfahrung</div>
-                <p className="mt-4 leading-7 text-slate-600">
+                <div className="mt-1.5 text-sm font-semibold leading-tight min-[600px]:mt-2 min-[600px]:text-lg">Jahre Erfahrung</div>
+                <p className="mt-3 text-sm leading-[1.35] text-slate-600 min-[600px]:mt-4 min-[600px]:text-[15px] min-[600px]:leading-7">
                   Langjährige Erfahrung im Vertrieb und im Souvenirhandel.
                 </p>
               </div>
 
-              <div className="rounded-[28px] border border-slate-200 bg-[#f8f8f7] p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <div className="rounded-[22px] border border-slate-200 bg-[#f8f8f7] p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg min-[600px]:rounded-[28px] min-[600px]:p-8">
                 <div
-                  className="text-4xl font-semibold text-[#145da0]"
+                  className="text-3xl font-semibold leading-none text-[#145da0] min-[600px]:text-4xl"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
                   100%
                 </div>
-                <div className="mt-2 text-lg font-semibold">Persönlich</div>
-                <p className="mt-4 leading-7 text-slate-600">
+                <div className="mt-1.5 text-sm font-semibold leading-tight min-[600px]:mt-2 min-[600px]:text-lg">Persönlich</div>
+                <p className="mt-3 text-sm leading-[1.35] text-slate-600 min-[600px]:mt-4 min-[600px]:text-[15px] min-[600px]:leading-7">
                   Direkte Betreuung, kurze Wege und ehrlicher Austausch.
                 </p>
               </div>
 
-              <div className="rounded-[28px] border border-slate-200 bg-[#f8f8f7] p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:col-span-2">
+              <div className="rounded-[22px] border border-slate-200 bg-[#f8f8f7] p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg min-[600px]:rounded-[28px] min-[600px]:p-8 sm:col-span-2">
                 <div
-                  className="text-4xl font-semibold text-[#145da0]"
+                  className="text-3xl font-semibold leading-none text-[#145da0] min-[600px]:text-4xl"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
                   Süd & West
                 </div>
-                <div className="mt-2 text-lg font-semibold">Starkes Netzwerk</div>
-                <p className="mt-4 leading-7 text-slate-600">
+                <div className="mt-1.5 text-sm font-semibold leading-tight min-[600px]:mt-2 min-[600px]:text-lg">Starkes Netzwerk</div>
+                <p className="mt-3 text-sm leading-[1.35] text-slate-600 min-[600px]:mt-4 min-[600px]:text-[15px] min-[600px]:leading-7">
                   Ein verlässliches Netzwerk im süd- und westdeutschen Raum mit
                   gutem Gespür für Märkte, Sortimente und Zielgruppen.
                 </p>
@@ -385,10 +385,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="sortiment" className="relative z-10 bg-[#f8f8f6] px-6 py-24">
+      <section id="sortiment" className="relative z-10 bg-[#f3f7fb] px-4 py-24 min-[600px]:px-6">
         <div className="mx-auto max-w-[1600px]">
           <Reveal className="max-w-4xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#145da0]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
               Sortiment
             </p>
 
@@ -399,7 +399,7 @@ export default function Home() {
               Sie sind auf der Suche nach Produkten?
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-slate-600">
+            <p className="mt-6 text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8">
               Lassen Sie mich gerne wissen, ob Sie Interesse haben. Ich lasse
               Ihnen gerne Kataloge zukommen. Schreiben Sie mir einfach eine
               Nachricht – ich kümmere mich darum, dass Sie schnellstmöglich alle
@@ -407,7 +407,7 @@ export default function Home() {
             </p>
           </Reveal>
 
-          <div className="mt-14 grid grid-cols-1 gap-5 min-[350px]:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-1 gap-3 min-[350px]:grid-cols-2 min-[600px]:mt-14 min-[600px]:gap-5 lg:grid-cols-4">
             {productImages.map((image, index) => (
 <Reveal key={image.id} delay={index * 70}>
   <button
@@ -438,8 +438,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="kontakt" className="bg-white px-6 py-24">
-        <div className="mx-auto max-w-[1600px] rounded-[34px] bg-[#145da0] p-10 text-white shadow-xl sm:p-14">
+      <section id="kontakt" className="bg-[#f3f7fb] px-4 py-16 min-[600px]:px-6 md:py-20">
+        <div className="mx-auto max-w-[1600px] rounded-[34px] bg-[#145da0] p-6 text-white shadow-xl min-[600px]:p-10 sm:p-14">
           <Reveal>
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/75">
@@ -451,7 +451,7 @@ export default function Home() {
               >
                 Interesse an einer Zusammenarbeit?
               </h2>
-              <p className="mt-4 max-w-2xl text-lg leading-8 text-white/85">
+              <p className="mt-4 max-w-2xl text-[15px] leading-[1.45] text-white/85 min-[600px]:text-lg min-[600px]:leading-8">
                 Ich freue mich über Ihre Anfrage und ein erstes persönliches
                 Gespräch. Gerne bespreche ich mit Ihnen, wie eine Zusammenarbeit
                 aussehen kann.
@@ -462,10 +462,10 @@ export default function Home() {
                   href="tel:01752063210"
                   className="rounded-2xl bg-white/10 p-6 transition duration-300 hover:-translate-y-1 hover:bg-white/20"
                 >
-                  <div className="text-sm uppercase tracking-[0.15em] text-white/70">
+                  <div className="text-xs uppercase tracking-[0.12em] text-white/70 min-[600px]:text-sm min-[600px]:tracking-[0.15em]">
                     Telefon
                   </div>
-                  <div className="mt-2 text-lg font-semibold text-white">
+                  <div className="mt-2 text-[15px] font-semibold text-white min-[600px]:text-lg">
                     0175-2063210
                   </div>
                 </a>
@@ -474,16 +474,16 @@ export default function Home() {
                   href="mailto:info@handelsvertretung-amend.de"
                   className="rounded-2xl bg-white/10 p-6 transition duration-300 hover:-translate-y-1 hover:bg-white/20"
                 >
-                  <div className="text-sm uppercase tracking-[0.15em] text-white/70">
+                  <div className="text-xs uppercase tracking-[0.12em] text-white/70 min-[600px]:text-sm min-[600px]:tracking-[0.15em]">
                     E-Mail
                   </div>
-                  <div className="mt-2 break-all text-lg font-semibold text-white">
+                  <div className="mt-2 break-all text-[15px] font-semibold text-white min-[600px]:text-lg">
                     info@handelsvertretung-amend.de
                   </div>
                 </a>
 
                 <div className="rounded-2xl bg-white/10 p-6 transition duration-300 hover:-translate-y-1 hover:bg-white/20">
-                  <div className="text-sm uppercase tracking-[0.15em] text-white/70">
+                  <div className="text-xs uppercase tracking-[0.12em] text-white/70 min-[600px]:text-sm min-[600px]:tracking-[0.15em]">
                     Region
                   </div>
                   <div className="mt-2 text-lg font-semibold">

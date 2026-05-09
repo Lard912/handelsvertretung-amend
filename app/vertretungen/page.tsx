@@ -207,20 +207,20 @@ export default function VertretungenPage() {
         <div className="absolute right-0 top-10 h-72 w-72 rounded-full bg-cyan-300/10 blur-3xl floating-delayed" />
         <div className="absolute bottom-0 left-1/3 h-40 w-40 rounded-full bg-sky-200/10 blur-3xl floating-slow" />
 
-        <div className="relative grid w-full gap-6 px-6 pt-16 min-[1649px]:mx-auto min-[1649px]:max-w-[1600px] min-[1649px]:px-0 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-12 lg:pt-20">
+        <div className="relative grid w-full gap-6 px-4 pt-16 min-[600px]:px-6 min-[1649px]:mx-auto min-[1649px]:max-w-[1600px] min-[1649px]:px-0 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-12 lg:pt-20">
           <Reveal className="max-w-none lg:max-w-3xl">
             <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-white/80 backdrop-blur">
               Vertretungen & Partnerschaften
             </p>
 
             <h1
-              className="mt-6 text-5xl font-semibold leading-tight tracking-tight text-white !text-white sm:text-6xl xl:text-7xl"
+              className="mt-6 text-[2.35rem] font-semibold leading-[0.9] tracking-tight text-white !text-white min-[600px]:text-5xl min-[600px]:leading-tight sm:text-6xl xl:text-7xl"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Meine Partner.
             </h1>
 
-            <p className="mt-6 max-w-none text-lg leading-8 text-white/80 sm:text-xl lg:max-w-2xl">
+            <p className="mt-6 max-w-none text-[15px] leading-[1.45] text-white/80 min-[600px]:text-lg min-[600px]:leading-8 sm:text-xl lg:max-w-2xl">
               Langjährige Zusammenarbeit, starke Sortimente und ein
               Vertriebsnetz, das auf Standorte, Zielgruppen und Markterfolg
               ausgerichtet ist.
@@ -237,12 +237,12 @@ export default function VertretungenPage() {
                   style={{ animationDelay: `${i * 120}ms` }}
                 >
                   <div
-                    className="text-3xl font-semibold leading-tight text-white"
+                    className="text-2xl font-semibold leading-none text-white min-[600px]:text-3xl min-[600px]:leading-tight"
                     style={{ fontFamily: "var(--font-playfair)" }}
                   >
                     {item.value}
                   </div>
-                  <div className="mt-1 text-sm text-white/75">{item.label}</div>
+                  <div className="mt-1 text-xs leading-tight text-white/75 min-[600px]:text-sm">{item.label}</div>
                 </div>
               ))}
             </div>
@@ -251,21 +251,21 @@ export default function VertretungenPage() {
           <Reveal delay={150} className="flex justify-end">
             <div className="relative w-full max-w-none lg:max-w-xl">
               <div className="absolute inset-0 rounded-[36px] bg-white/10 blur-2xl" />
-              <div className="relative rounded-[36px] border border-white/15 bg-white/10 p-5 shadow-2xl backdrop-blur-xl">
-                <div className="overflow-hidden rounded-[28px] bg-white/90 p-6 text-slate-900">
-                  <div className="mb-6 flex items-center justify-between">
+              <div className="relative rounded-[36px] border border-white/15 bg-white/10 p-3 shadow-2xl backdrop-blur-xl min-[600px]:p-5">
+                <div className="overflow-hidden rounded-[28px] bg-white/90 p-5 text-slate-900 min-[600px]:p-6">
+                  <div className="mb-6 flex items-start justify-between gap-3">
                     <div>
                       <p className="text-xs uppercase tracking-[0.28em] text-[#145da0]">
                         Highlights
                       </p>
                       <h2
-                        className="mt-2 text-3xl font-semibold"
+                        className="mt-2 text-2xl font-semibold leading-tight min-[600px]:text-3xl"
                         style={{ fontFamily: "var(--font-playfair)" }}
                       >
                         Vertriebsprofil
                       </h2>
                     </div>
-                    <div className="rounded-2xl bg-[#145da0]/10 px-3 py-2 text-sm font-semibold text-[#145da0]">
+                    <div className="rounded-2xl bg-[#145da0]/10 px-3 py-2 text-xs font-semibold text-[#145da0] min-[600px]:text-sm">
                       Süd & West
                     </div>
                   </div>
@@ -279,10 +279,10 @@ export default function VertretungenPage() {
                     ].map((item, index) => (
                       <div
                         key={item}
-                        className="feature-card flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-4 shadow-sm"
+                        className="feature-card flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3.5 shadow-sm min-[600px]:py-4"
                         style={{ animationDelay: `${index * 120}ms` }}
                       >
-                        <div className="mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-[#145da0] text-xs font-bold text-white">
+                        <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#145da0] text-xs font-bold leading-none text-white">
                           ✓
                         </div>
                         <p className="text-sm leading-5 text-slate-600">
@@ -298,23 +298,23 @@ export default function VertretungenPage() {
         </div>
       </section>
 
-      <section
-        id="leistungen"
-        className="relative overflow-hidden bg-[#f3f7fb] px-6 py-24"
-      >
+<section
+  id="leistungen"
+  className="relative overflow-hidden bg-[#f3f7fb] px-4 py-16 min-[600px]:px-6 md:py-20"
+>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(20,93,160,0.06),transparent_24%),radial-gradient(circle_at_85%_20%,rgba(56,189,248,0.08),transparent_26%)]" />
         <div className="relative mx-auto max-w-[1600px]">
           <Reveal className="max-w-4xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#145da0]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
               Leistungen
             </p>
             <h2
-              className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl"
+              className="mt-3 text-3xl font-semibold leading-[1.05] tracking-tight text-slate-900 min-[600px]:text-4xl sm:text-5xl"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Was ich als Handelsvertreter biete
             </h2>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+            <p className="mt-6 max-w-3xl text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8">
               Ich unterstütze nicht nur beim Verkauf, sondern begleite
               Sortimente, Standorte und Marktauftritte mit Erfahrung,
               persönlicher Betreuung und einem klaren Blick für das, was
@@ -322,21 +322,21 @@ export default function VertretungenPage() {
             </p>
           </Reveal>
 
-          <div className="mt-14 grid items-stretch gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="mt-10 grid items-stretch gap-4 min-[600px]:mt-14 min-[600px]:gap-6 lg:grid-cols-[1.05fr_0.95fr]">
             <Reveal className="h-full">
-              <div className="h-full rounded-[34px] border border-white/70 bg-white p-8 shadow-[0_18px_50px_rgba(15,23,42,0.08)] sm:p-10">
+              <div className="h-full rounded-[28px] border border-white/70 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] min-[600px]:rounded-[34px] min-[600px]:p-8 sm:p-10">
                 <div className="inline-flex rounded-full bg-[#145da0]/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0]">
                   Im Kern
                 </div>
 
                 <h3
-                  className="mt-5 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl"
+                  className="mt-5 text-2xl font-semibold leading-[1.05] tracking-tight text-slate-900 min-[600px]:text-3xl sm:text-4xl"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
                   Vertrieb mit Marktgespür, Nähe und Verlässlichkeit
                 </h3>
 
-                <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
+                <p className="mt-6 max-w-3xl text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8">
                   Gute Vertretung bedeutet für mich, Produkte nicht isoliert zu
                   betrachten, sondern immer im Zusammenhang mit Region,
                   Zielgruppe, Präsentation und tatsächlichem Abverkauf. Genau
@@ -351,7 +351,7 @@ export default function VertretungenPage() {
                   ].map((item, index) => (
                     <div
                       key={item}
-                      className="feature-card rounded-[24px] border border-slate-200 bg-slate-50 px-4 py-4 text-sm font-semibold text-slate-700 transition duration-300 hover:-translate-y-1 hover:border-[#145da0]/20 hover:bg-white hover:shadow-md"
+                      className="feature-card rounded-[20px] border border-slate-200 bg-slate-50 px-4 py-3 text-xs font-semibold leading-[1.35] text-slate-700 transition duration-300 hover:-translate-y-1 hover:border-[#145da0]/20 hover:bg-white hover:shadow-md min-[600px]:rounded-[24px] min-[600px]:py-4 min-[600px]:text-sm"
                       style={{ animationDelay: `${index * 100}ms` }}
                     >
                       {item}
@@ -362,7 +362,7 @@ export default function VertretungenPage() {
             </Reveal>
 
             <Reveal delay={150} className="h-full">
-              <div className="relative h-full overflow-hidden rounded-[36px] bg-[linear-gradient(135deg,#0d3b66_0%,#145da0_60%,#1c7ed6_100%)] p-8 text-white shadow-[0_22px_70px_rgba(20,93,160,0.24)] sm:p-10">
+              <div className="relative h-full overflow-hidden rounded-[28px] bg-[linear-gradient(135deg,#0d3b66_0%,#145da0_60%,#1c7ed6_100%)] p-6 text-white shadow-[0_22px_70px_rgba(20,93,160,0.24)] min-[600px]:rounded-[36px] min-[600px]:p-8 sm:p-10">
                 <div className="absolute right-0 top-0 h-40 w-40 rounded-full bg-white/10 blur-3xl floating" />
                 <div className="absolute bottom-0 left-0 h-40 w-40 rounded-full bg-cyan-300/10 blur-3xl floating-delayed" />
 
@@ -386,7 +386,7 @@ export default function VertretungenPage() {
                         <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white text-xs font-bold text-[#145da0]">
                           ✓
                         </div>
-                        <p className="text-sm leading-6 text-white/85">
+                        <p className="text-xs leading-[1.45] text-white/85 min-[600px]:text-sm min-[600px]:leading-6">
                           {item}
                         </p>
                       </div>
@@ -397,8 +397,8 @@ export default function VertretungenPage() {
             </Reveal>
           </div>
 
-  <div className="mt-10">
-  <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+  <div className="mt-8 min-[600px]:mt-10">
+  <div className="grid gap-4 min-[600px]:gap-6 md:grid-cols-2 xl:grid-cols-3">
     {strengths.map((item, index) => {
       const isExtraMobileCard = index >= 2;
       const isVisibleOnMobile = index < 2 || showAllStrengthsMobile;
@@ -415,7 +415,7 @@ export default function VertretungenPage() {
           }`}
         >
           <Reveal delay={index * 80}>
-            <div className="group relative h-full overflow-hidden rounded-[28px] border border-white/70 bg-white p-6 shadow-[0_12px_40px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(15,23,42,0.12)]">
+            <div className="group relative h-full overflow-hidden rounded-[24px] border border-white/70 bg-white p-5 shadow-[0_12px_40px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(15,23,42,0.12)] min-[600px]:rounded-[28px] min-[600px]:p-6">
               <div className="absolute inset-0 bg-gradient-to-br from-[#145da0]/0 to-[#145da0]/10 opacity-0 transition duration-300 group-hover:opacity-100" />
 
               <div className="relative">
@@ -424,13 +424,13 @@ export default function VertretungenPage() {
                 </div>
 
                 <h3
-                  className="mt-4 text-xl font-semibold text-slate-900"
+                  className="mt-4 text-lg font-semibold leading-tight text-slate-900 min-[600px]:text-xl"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-7 text-slate-600">
+                <p className="mt-3 text-xs leading-[1.45] text-slate-600 min-[600px]:text-sm min-[600px]:leading-7">
                   {item.text}
                 </p>
               </div>
@@ -458,29 +458,29 @@ export default function VertretungenPage() {
         </div>
       </section>
 
-      <section id="partner" className="bg-[#f6f7fb] px-6 py-24">
+      <section id="partner" className="bg-[#f3f7fb] px-4 pb-16 pt-8 min-[600px]:px-6 min-[600px]:pt-10 md:pb-20">
         <div className="mx-auto max-w-[1600px]">
           <Reveal>
-            <div className="mb-16">
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#145da0]">
+            <div className="mx-auto mb-10 max-w-3xl text-center min-[600px]:mb-16">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
                 Aktuelle Vertretungen
               </p>
 
               <h2
-                className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl"
+                className="mt-3 text-3xl font-semibold leading-[1.05] tracking-tight text-slate-900 min-[600px]:text-4xl sm:text-5xl"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
                 Meine Partner
               </h2>
 
-              <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">
+              <p className="mx-auto mt-6 max-w-3xl text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8">
                 Zuverlässige Partnerschaften mit einem Sortiment, das auf
                 Märkte, Standorte und Verkaufschancen abgestimmt ist.
               </p>
             </div>
           </Reveal>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 min-[600px]:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {partners.map((partner, index) => {
               const isBlueCard = index === 2;
 
@@ -491,7 +491,7 @@ export default function VertretungenPage() {
                   className={isBlueCard ? "md:col-span-2 lg:col-span-1" : ""}
                 >
                   <article
-                    className={`group relative h-full overflow-hidden rounded-[32px] p-8 transition duration-500 hover:-translate-y-2 ${
+                    className={`group relative h-full overflow-hidden rounded-[26px] p-6 transition duration-500 hover:-translate-y-2 min-[600px]:rounded-[32px] min-[600px]:p-8 ${
                       isBlueCard
                         ? "border border-[#145da0]/20 bg-[linear-gradient(135deg,#0d3b66_0%,#145da0_60%,#1c7ed6_100%)] text-white shadow-[0_20px_50px_rgba(20,93,160,0.24)]"
                         : "border border-white/60 bg-white shadow-[0_12px_40px_rgba(15,23,42,0.08)] hover:shadow-[0_20px_50px_rgba(20,93,160,0.18)]"
@@ -530,7 +530,7 @@ export default function VertretungenPage() {
 
                       <div className={isBlueCard ? "md:flex-1" : ""}>
                         <h3
-                          className={`text-2xl font-semibold ${
+                          className={`text-xl font-semibold leading-tight min-[600px]:text-2xl ${
                             isBlueCard
                               ? "!text-white text-center md:text-left lg:text-center"
                               : "text-center text-[#145da0]"
@@ -540,8 +540,8 @@ export default function VertretungenPage() {
                           {partner.title}
                         </h3>
 
-                        <p
-                          className={`mt-4 leading-7 ${
+<p
+  className={`mt-4 text-[15px] leading-[1.45] min-[600px]:leading-7 ${
                             isBlueCard
                               ? "text-center text-white/90 md:text-left lg:text-center"
                               : "text-center text-slate-600"
@@ -552,7 +552,7 @@ export default function VertretungenPage() {
 
                         <div className="mt-5">
                           <div
-                            className={`rounded-2xl px-4 py-4 text-sm leading-7 ${
+                            className={`rounded-2xl px-4 py-4 text-xs leading-[1.45] min-[600px]:text-sm min-[600px]:leading-7 ${
                               isBlueCard
                                 ? "bg-white/10 text-white/90"
                                 : "bg-slate-50 text-slate-600"
@@ -571,28 +571,28 @@ export default function VertretungenPage() {
         </div>
       </section>
 
-      <section className="bg-[#fcfcfd] px-6 py-24">
+      <section className="bg-[#f3f7fb] px-4 pb-16 pt-8 min-[600px]:px-6 min-[600px]:pt-10 md:pb-20">
         <div className="mx-auto max-w-[1600px]">
           <Reveal className="text-center">
             <p className="text-sm uppercase tracking-[0.28em] text-[#145da0]">
               Erfahrung
             </p>
             <h2
-              className="mt-3 text-3xl font-semibold text-slate-900 sm:text-4xl"
+              className="mt-3 text-2xl font-semibold leading-tight text-slate-900 min-[600px]:text-3xl sm:text-4xl"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Vergangene Vertretungen
             </h2>
-            <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600">
+            <p className="mx-auto mt-6 max-w-3xl text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg">
               Im Laufe der Jahre durfte ich mit zahlreichen Unternehmen
               erfolgreich zusammenarbeiten.
             </p>
           </Reveal>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+          <div className="-mx-4 mt-10 flex gap-4 overflow-x-auto px-4 pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden min-[600px]:-mx-6 min-[600px]:mt-14 min-[600px]:gap-6 min-[600px]:px-6 md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0 md:pb-0">
             {formerPartners.map((partner, index) => (
-              <Reveal key={partner.title} delay={index * 100}>
-                <article className="group h-full rounded-[28px] border border-slate-200 bg-[#fafaf9] px-6 py-8 text-center shadow-sm transition duration-500 hover:-translate-y-2 hover:border-[#145da0]/20 hover:shadow-xl">
+              <Reveal key={partner.title} delay={index * 100} className="w-[82%] flex-none md:w-auto md:flex-auto">
+                <article className="group h-full rounded-[24px] border border-slate-200 bg-[#fafaf9] px-5 py-6 text-center shadow-sm transition duration-500 hover:-translate-y-2 hover:border-[#145da0]/20 hover:shadow-xl min-[600px]:rounded-[28px] min-[600px]:px-6 min-[600px]:py-8">
                   <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-white shadow-inner ring-1 ring-slate-100">
                     <img
                       src={partner.image}
@@ -608,13 +608,13 @@ export default function VertretungenPage() {
                   </div>
 
                   <div
-                    className="text-lg font-semibold text-slate-800"
+                    className="text-[15px] font-semibold text-slate-800 min-[600px]:text-lg"
                     style={{ fontFamily: "var(--font-playfair)" }}
                   >
                     {partner.title}
                   </div>
 
-                  <div className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#145da0]">
+                  <div className="mt-2 text-xs font-semibold uppercase tracking-[0.14em] text-[#145da0] min-[600px]:text-sm min-[600px]:tracking-[0.18em]">
                     {partner.years}
                   </div>
 
@@ -628,28 +628,28 @@ export default function VertretungenPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#eef5fb] px-6 py-24">
+      <section className="relative overflow-hidden bg-[#eef5fb] px-4 py-16 min-[600px]:px-6 md:py-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(20,93,160,0.08),transparent_25%),radial-gradient(circle_at_80%_20%,rgba(56,189,248,0.10),transparent_25%)]" />
         <div className="relative mx-auto grid max-w-[1600px] items-center gap-14 lg:grid-cols-2">
           <Reveal>
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#145da0]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
               Einsatzgebiet
             </p>
 
             <h2
-              className="mt-3 text-4xl font-semibold text-slate-900 sm:text-5xl"
+              className="mt-3 text-3xl font-semibold leading-[1.05] text-slate-900 min-[600px]:text-4xl sm:text-5xl"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Süd- und Westdeutschland
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-slate-600">
+            <p className="mt-6 text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8">
               Mein Vertriebsgebiet umfasst insbesondere Bayern,
               Baden-Württemberg, Hessen, Rheinland-Pfalz, das Saarland sowie
               Nordrhein-Westfalen.
             </p>
 
-            <div className="mt-8 grid gap-4 min-[450px]:grid-cols-2">
+            <div className="mt-6 grid grid-cols-2 gap-3 min-[600px]:mt-8 min-[600px]:gap-4">
               {[
                 "Bayern",
                 "Baden-Württemberg",
@@ -660,7 +660,7 @@ export default function VertretungenPage() {
               ].map((region, index) => (
 <div
   key={region}
-  className="rounded-2xl border border-white/60 bg-white px-4 py-4 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-md"
+  className="rounded-2xl border border-white/60 bg-white px-4 py-3 text-xs font-semibold text-slate-700 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-md min-[600px]:py-4 min-[600px]:text-sm"
 >
   {region}
 </div>
@@ -669,7 +669,7 @@ export default function VertretungenPage() {
           </Reveal>
 
           <Reveal delay={150}>
-            <div className="group flex justify-center overflow-hidden rounded-[32px] border border-white/60 bg-white p-6 shadow-xl backdrop-blur">
+            <div className="group flex justify-center overflow-hidden rounded-[26px] border border-white/60 bg-white p-4 shadow-xl backdrop-blur min-[600px]:rounded-[32px] min-[600px]:p-6">
               <img
                 src="/sued_west_deutschland.png"
                 alt="Vertriebsgebiet Süd- und Westdeutschland"
@@ -680,21 +680,21 @@ export default function VertretungenPage() {
         </div>
       </section>
 
-      <section id="sortiment" className="relative z-10 bg-[#f8f8f6] px-6 py-24">
+      <section id="sortiment" className="relative z-10 bg-[#f3f7fb]  px-4 py-16 min-[600px]:px-6 md:py-20">
         <div className="mx-auto max-w-[1600px]">
           <Reveal className="max-w-4xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#145da0]">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
               Sortiment
             </p>
 
             <h2
-              className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl"
+              className="mt-3 text-3xl font-semibold leading-[1.05] tracking-tight min-[600px]:text-4xl sm:text-5xl"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Sie sind auf der Suche nach Produkten?
             </h2>
 
-            <p className="mt-6 text-lg leading-8 text-slate-600">
+            <p className="mt-6 text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8">
               Lassen Sie mich gerne wissen, ob Sie Interesse haben. Ich lasse
               Ihnen gerne Kataloge zukommen. Schreiben Sie mir einfach eine
               Nachricht – ich kümmere mich darum, dass Sie schnellstmöglich alle
@@ -702,7 +702,7 @@ export default function VertretungenPage() {
             </p>
           </Reveal>
 
-          <div className="mt-14 grid grid-cols-1 gap-5 min-[450px]:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-2 gap-3 min-[600px]:mt-14 min-[600px]:gap-5 lg:grid-cols-4">
             {productImages.map((image, index) => (
               <Reveal key={image.id} delay={index * 70}>
                 <button

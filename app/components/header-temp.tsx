@@ -38,12 +38,12 @@ const isActive = (href: string) => currentPath === normalizePath(href);
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#145da0] shadow-[0_8px_30px_rgba(15,23,42,0.08)] backdrop-blur-xl">
-        <div className="mx-auto flex max-w-[1650px] items-center justify-between px-6 py-4">
+        <div className="mx-auto flex h-20 max-w-[1650px] items-center justify-between px-4 py-0 min-[600px]:px-6 md:h-auto md:py-4">
           <Link href="/" className="group flex items-center gap-4">
             <img
               src="/logo.png"
               alt="Handelsvertretung Amend"
-              className="h-14 w-auto transition duration-300 group-hover:scale-105 sm:h-16"
+              className="h-12 w-auto transition duration-300 group-hover:scale-105 sm:h-14 md:h-16"
             />
 
             <div className="hidden leading-none md:block">
@@ -105,12 +105,12 @@ const isActive = (href: string) => currentPath === normalizePath(href);
           onClick={() => setMobileOpen(false)}
         />
 
-        <div
-          className={`absolute right-0 top-0 flex h-full w-[88vw] max-w-[360px] flex-col bg-[#145da0] shadow-[-20px_0_60px_rgba(15,23,42,0.22)] transition duration-300 ease-out ${
-            mobileOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-<div className="flex h-[88px] items-center justify-between border-b border-white/10 px-5 min-[640px]:h-[96px]">
+<div
+  className={`absolute right-0 top-0 flex h-full w-full flex-col bg-[#145da0] shadow-[-20px_0_60px_rgba(15,23,42,0.22)] transition duration-300 ease-out min-[600px]:w-[88vw] min-[600px]:max-w-[360px] ${
+    mobileOpen ? "translate-x-0" : "translate-x-full"
+  }`}
+>
+<div className="flex h-20 items-center justify-between border-b border-white/10 px-4 min-[600px]:px-5">
   <div
     className="pl-1 text-2xl font-semibold leading-none text-white"
     style={{ fontFamily: "var(--font-playfair)" }}
