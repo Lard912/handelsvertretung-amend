@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+  const lastScrollY = useRef(0);
 
   const navItems = [
     { href: "/", label: "Startseite" },
@@ -17,6 +19,7 @@ export default function Header() {
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
+
     return () => {
       document.body.style.overflow = "";
     };
@@ -26,24 +29,64 @@ export default function Header() {
     setMobileOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (mobileOpen) {
+        setShowHeader(true);
+        lastScrollY.current = currentScrollY;
+        return;
+      }
+
+      if (currentScrollY < 20) {
+        setShowHeader(true);
+        lastScrollY.current = currentScrollY;
+        return;
+      }
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 90) {
+        setShowHeader(false);
+      }
+
+      if (currentScrollY < lastScrollY.current) {
+        setShowHeader(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [mobileOpen]);
+
   const normalizePath = (path: string) => {
-  if (path === "/") return "/";
-  return path.replace(/\/$/, "");
-};
+    if (path === "/") return "/";
+    return path.replace(/\/$/, "");
+  };
 
-const currentPath = normalizePath(pathname);
-
-const isActive = (href: string) => currentPath === normalizePath(href);
+  const currentPath = normalizePath(pathname);
+  const isActive = (href: string) => currentPath === normalizePath(href);
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#145da0] shadow-[0_8px_30px_rgba(15,23,42,0.08)] backdrop-blur-xl">
+      <header
+        className={`sticky top-0 z-50 border-b border-white/10 bg-[#145da0] shadow-[0_8px_30px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-transform duration-300 ease-out min-[600px]:translate-y-0 ${
+          showHeader ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
         <div className="mx-auto flex h-20 max-w-[1650px] items-center justify-between px-4 py-0 min-[600px]:px-6 md:h-auto md:py-4">
-          <Link href="/" className="group flex items-center gap-4">
+          <Link
+            href="/"
+            className="group flex items-center gap-4 pl-1 min-[600px]:pl-0"
+          >
             <img
               src="/logo.png"
               alt="Handelsvertretung Amend"
-              className="h-12 w-auto transition duration-300 group-hover:scale-105 sm:h-14 md:h-16"
+              className="h-14 w-auto transition duration-300 group-hover:scale-105 min-[600px]:h-12 sm:h-14 md:h-16"
             />
 
             <div className="hidden leading-none md:block">
@@ -73,11 +116,7 @@ const isActive = (href: string) => currentPath === normalizePath(href);
 
             <Link
               href="/kontakt"
-              className={`ml-2 inline-flex items-center rounded-full px-5 py-2.5 text-sm font-semibold shadow-lg transition duration-300 hover:-translate-y-0.5 hover:shadow-xl ${
-                isActive("/kontakt")
-                  ? "bg-white text-[#145da0]"
-                  : "bg-white text-[#145da0]"
-              }`}
+              className="ml-2 inline-flex items-center rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#145da0] shadow-lg transition duration-300 hover:-translate-y-0.5 hover:shadow-xl"
             >
               Kontakt
             </Link>
@@ -105,27 +144,27 @@ const isActive = (href: string) => currentPath === normalizePath(href);
           onClick={() => setMobileOpen(false)}
         />
 
-<div
-  className={`absolute right-0 top-0 flex h-full w-full flex-col bg-[#145da0] shadow-[-20px_0_60px_rgba(15,23,42,0.22)] transition duration-300 ease-out min-[600px]:w-[88vw] min-[600px]:max-w-[360px] ${
-    mobileOpen ? "translate-x-0" : "translate-x-full"
-  }`}
->
-<div className="flex h-20 items-center justify-between border-b border-white/10 px-4 min-[600px]:px-5">
-  <div
-    className="pl-1 text-2xl font-semibold leading-none text-white"
-    style={{ fontFamily: "var(--font-playfair)" }}
-  >
-    Menü
-  </div>
+        <div
+          className={`absolute right-0 top-0 flex h-full w-full flex-col bg-[#145da0] shadow-[-20px_0_60px_rgba(15,23,42,0.22)] transition duration-300 ease-out min-[600px]:w-[88vw] min-[600px]:max-w-[360px] ${
+            mobileOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div className="flex h-20 items-center justify-between border-b border-white/10 px-4 min-[600px]:px-5">
+            <div
+              className="pl-1 text-2xl font-semibold leading-none text-white"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Menü
+            </div>
 
-  <button
-    onClick={() => setMobileOpen(false)}
-    className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white transition hover:bg-white/15"
-    aria-label="Menü schließen"
-  >
-    ✕
-  </button>
-</div>
+            <button
+              onClick={() => setMobileOpen(false)}
+              className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white transition hover:bg-white/15"
+              aria-label="Menü schließen"
+            >
+              ✕
+            </button>
+          </div>
 
           <nav className="flex flex-1 flex-col gap-2 px-5 py-5">
             {navItems.map((item) => (

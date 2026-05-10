@@ -116,14 +116,14 @@ export default function Home() {
 
   return (
     <>
-<section className="relative overflow-hidden bg-[linear-gradient(135deg,#0d3b66_0%,#145da0_60%,#1c7ed6_100%)] py-12 text-white min-[600px]:py-20 md:min-h-[calc(100vh-88px)] md:flex md:items-center">
+<section className="relative flex min-h-[calc(100vh-80px)] items-center overflow-hidden bg-[linear-gradient(135deg,#0d3b66_0%,#145da0_60%,#1c7ed6_100%)] py-10 text-white min-[600px]:py-20 md:min-h-[calc(100vh-88px)]">
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.10),transparent_22%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.08),transparent_18%),radial-gradient(circle_at_50%_100%,rgba(56,189,248,0.18),transparent_24%)]" />
   <div className="absolute -left-10 top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl floating" />
   <div className="absolute right-0 top-10 h-72 w-72 rounded-full bg-cyan-300/10 blur-3xl floating-delayed" />
 
 <div className="relative grid w-full items-center gap-6 px-4 min-[600px]:px-6 min-[1648px]:mx-auto min-[1648px]:w-[1600px] min-[1648px]:px-0 md:-mt-10 md:grid-cols-[1.05fr_0.95fr] md:gap-10 lg:gap-14">    <Reveal>
       <div className="max-w-3xl">
-        <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-white/80 backdrop-blur">
+        <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/80 backdrop-blur min-[600px]:px-4 min-[600px]:py-2 min-[600px]:text-xs min-[600px]:tracking-[0.28em]">
           seit 2000
         </p>
 <p
@@ -140,7 +140,7 @@ export default function Home() {
           Standorte.
         </p>
 
-        <div className="mt-10 flex flex-wrap gap-4">
+        <div className="mt-5 flex flex-wrap gap-3 min-[600px]:mt-10 min-[600px]:gap-4">
           <a
             href="/vertretungen"
             className="inline-flex items-center rounded-2xl bg-white px-5 py-2.5 text-xs font-semibold text-[#145da0] shadow-xl transition duration-300 hover:-translate-y-1 hover:shadow-2xl min-[600px]:px-6 min-[600px]:py-3 min-[600px]:text-sm"
@@ -158,29 +158,26 @@ export default function Home() {
       </div>
     </Reveal>
 
-    <Reveal delay={120}>
+    <Reveal delay={120} className="mt-8 min-[600px]:mt-0">
       <div className="relative w-full md:mx-auto md:max-w-2xl">
         <div className="absolute inset-0 rounded-[36px] bg-white/10 blur-2xl" />
 
-<div className="relative overflow-hidden rounded-[28px] border border-white/15 bg-white/10 p-3 shadow-[0_24px_80px_rgba(15,23,42,0.24)] backdrop-blur-xl sm:rounded-[36px] sm:p-4">          <div className="overflow-hidden rounded-[28px] bg-white">
-            <img
-              src="/Matthias_3.jpg"
-              alt="Matthias Amend"
-              className="h-[260px] w-full object-cover object-[72%_center] sm:h-[320px] md:h-[520px] lg:h-[560px]"
-            />
+<div className="group relative overflow-hidden rounded-[28px] border border-white/15 bg-white/10 p-3 shadow-[0_24px_80px_rgba(15,23,42,0.24)] backdrop-blur-xl sm:rounded-[36px] sm:p-4">          <div className="overflow-hidden rounded-[28px] bg-white">
+<img
+  src="/Matthias_11.jpg"
+  alt="Matthias Amend"
+  className="h-[260px] w-full object-cover object-[62%_100%] sm:h-[320px] md:h-[520px] md:object-[62%_100%] lg:h-[560px]"
+/>
           </div>
 
-          <div className="absolute bottom-6 left-6 right-6 rounded-[24px] border border-white/20 bg-[#0d3b66]/78 px-5 py-4 text-white backdrop-blur-md">
-            <p className="hidden md:block text-xs font-semibold uppercase tracking-[0.22em] text-white/70">
-              Handelsvertretung
-            </p>
-            <h2
-              className="mt-0 md:mt-2 text-2xl font-semibold !text-white"
-              style={{ fontFamily: "var(--font-playfair)" }}
-            >
-              Matthias Amend
-            </h2>
-          </div>
+<div className="absolute bottom-4 left-4 right-4 rounded-[18px] border border-white/15 bg-[#0d3b66]/72 px-4 py-3 text-white shadow-lg backdrop-blur-md transition duration-300 min-[600px]:bottom-6 min-[600px]:left-6 min-[600px]:right-6 min-[600px]:rounded-[24px] min-[600px]:border-white/20 min-[600px]:bg-[#0d3b66]/78 min-[600px]:px-5 min-[600px]:py-4 md:pointer-events-none md:translate-y-4 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+  <h2
+    className="mt-0 text-lg font-semibold leading-tight !text-white min-[600px]:text-2xl"
+    style={{ fontFamily: "var(--font-playfair)" }}
+  >
+    Matthias Amend
+  </h2>
+</div>
         </div>
       </div>
     </Reveal>
@@ -385,7 +382,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="sortiment" className="relative z-10 bg-[#f3f7fb] px-4 py-24 min-[600px]:px-6">
+      <section id="sortiment" className="relative z-10 bg-[#f3f7fb] px-4 pb-[70px] pt-24 min-[600px]:px-6">
         <div className="mx-auto max-w-[1600px]">
           <Reveal className="max-w-4xl">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
@@ -438,7 +435,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="kontakt" className="bg-[#f3f7fb] px-4 py-16 min-[600px]:px-6 md:py-20">
+      <section id="kontakt" className="bg-[#f3f7fb] px-4 pb-16 pt-0 min-[600px]:px-6 min-[600px]:pt-16 md:py-20">
         <div className="mx-auto max-w-[1600px] rounded-[34px] bg-[#145da0] p-6 text-white shadow-xl min-[600px]:p-10 sm:p-14">
           <Reveal>
             <div>
@@ -457,40 +454,58 @@ export default function Home() {
                 aussehen kann.
               </p>
 
-              <div className="mt-10 grid gap-6 grid-cols-1 md:grid-cols-3">
-                <a
-                  href="tel:01752063210"
-                  className="rounded-2xl bg-white/10 p-6 transition duration-300 hover:-translate-y-1 hover:bg-white/20"
-                >
-                  <div className="text-xs uppercase tracking-[0.12em] text-white/70 min-[600px]:text-sm min-[600px]:tracking-[0.15em]">
-                    Telefon
-                  </div>
-                  <div className="mt-2 text-[15px] font-semibold text-white min-[600px]:text-lg">
-                    0175-2063210
-                  </div>
-                </a>
+ <div className="mt-8 grid gap-3 min-[600px]:mt-10 min-[600px]:gap-4 md:grid-cols-3">
+  <a
+    href="tel:01752063210"
+    className="group flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-4 py-4 text-white ring-1 ring-white/10 transition duration-300 hover:-translate-y-1 hover:bg-white/16 hover:ring-white/20 min-[600px]:px-5 min-[600px]:py-5"
+  >
+    <div className="min-w-0">
+      <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/60 min-[600px]:text-xs">
+        Telefon
+      </span>
+      <div className="mt-1 truncate text-[15px] font-semibold leading-tight text-white min-[600px]:text-base">
+        0175-2063210
+      </div>
+    </div>
 
-                <a
-                  href="mailto:info@handelsvertretung-amend.de"
-                  className="rounded-2xl bg-white/10 p-6 transition duration-300 hover:-translate-y-1 hover:bg-white/20"
-                >
-                  <div className="text-xs uppercase tracking-[0.12em] text-white/70 min-[600px]:text-sm min-[600px]:tracking-[0.15em]">
-                    E-Mail
-                  </div>
-                  <div className="mt-2 break-all text-[15px] font-semibold text-white min-[600px]:text-lg">
-                    info@handelsvertretung-amend.de
-                  </div>
-                </a>
+    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/12 text-sm font-semibold text-white transition group-hover:bg-white/20">
+      →
+    </span>
+  </a>
 
-                <div className="rounded-2xl bg-white/10 p-6 transition duration-300 hover:-translate-y-1 hover:bg-white/20">
-                  <div className="text-xs uppercase tracking-[0.12em] text-white/70 min-[600px]:text-sm min-[600px]:tracking-[0.15em]">
-                    Region
-                  </div>
-                  <div className="mt-2 text-lg font-semibold">
-                    Süd- und Westdeutschland
-                  </div>
-                </div>
-              </div>
+  <a
+    href="mailto:info@handelsvertretung-amend.de"
+    className="group flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-4 py-4 text-white ring-1 ring-white/10 transition duration-300 hover:-translate-y-1 hover:bg-white/16 hover:ring-white/20 min-[600px]:px-5 min-[600px]:py-5"
+  >
+    <div className="min-w-0">
+      <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/60 min-[600px]:text-xs">
+        E-Mail
+      </span>
+      <div className="mt-1 truncate text-[15px] font-semibold leading-tight text-white min-[600px]:text-base">
+        info@handelsvertretung-amend.de
+      </div>
+    </div>
+
+    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/12 text-sm font-semibold text-white transition group-hover:bg-white/20">
+      →
+    </span>
+  </a>
+
+  <div className="flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-4 py-4 text-white ring-1 ring-white/10 transition duration-300 hover:-translate-y-1 hover:bg-white/16 hover:ring-white/20 min-[600px]:px-5 min-[600px]:py-5">
+    <div className="min-w-0">
+      <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/60 min-[600px]:text-xs">
+        Region
+      </span>
+      <div className="mt-1 truncate text-[15px] font-semibold leading-tight text-white min-[600px]:text-base">
+        Süd- und Westdeutschland
+      </div>
+    </div>
+
+    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/12 text-sm font-semibold text-white">
+      ✓
+    </span>
+  </div>
+</div>
             </div>
           </Reveal>
         </div>

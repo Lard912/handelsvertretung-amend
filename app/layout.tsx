@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import CookieBar from "./components/CookieBar";
 
 import HeaderTemp from "./components/header-temp";
 import FooterTemp from "./components/footer-temp";
-import ScrollToTop from "./ScrollToTop"; // ✅ HIER importieren
+import ScrollToTop from "./ScrollToTop";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,6 +23,13 @@ export const metadata: Metadata = {
   description: "Handelsvertretung für Souvenirartikel",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#145da0",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -34,7 +41,6 @@ export default function RootLayout({
         className={`${inter.variable} ${playfair.variable} min-h-screen bg-[#f5f5f3] text-slate-900`}
         style={{ fontFamily: "var(--font-inter)" }}
       >
-        {/* ✅ HIER einfügen */}
         <ScrollToTop />
 
         <div className="flex min-h-screen flex-col">
