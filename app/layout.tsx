@@ -38,12 +38,12 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body
-        className={`${inter.variable} ${playfair.variable} min-h-screen bg-[#f5f5f3] text-slate-900`}
+        className={`${inter.variable} ${playfair.variable} min-h-[100dvh] bg-[#f5f5f3] text-slate-900`}
         style={{ fontFamily: "var(--font-inter)" }}
       >
         <ScrollToTop />
 
-        <div className="flex min-h-screen flex-col">
+        <div className="flex min-h-[100dvh] flex-col">
           <HeaderTemp />
           <main className="flex-1">{children}</main>
           <FooterTemp />

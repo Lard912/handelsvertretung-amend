@@ -435,81 +435,85 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="kontakt" className="bg-[#f3f7fb] px-4 pb-16 pt-0 min-[600px]:px-6 min-[600px]:pt-16 md:py-20">
-        <div className="mx-auto max-w-[1600px] rounded-[34px] bg-[#145da0] p-6 text-white shadow-xl min-[600px]:p-10 sm:p-14">
-          <Reveal>
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/75">
-                Kontakt
-              </p>
-              <h2
-                className="mt-3 text-4xl font-semibold tracking-tight !text-white sm:text-5xl"
-                style={{ fontFamily: "var(--font-playfair)" }}
-              >
-                Interesse an einer Zusammenarbeit?
-              </h2>
-              <p className="mt-4 max-w-2xl text-[15px] leading-[1.45] text-white/85 min-[600px]:text-lg min-[600px]:leading-8">
-                Ich freue mich über Ihre Anfrage und ein erstes persönliches
-                Gespräch. Gerne bespreche ich mit Ihnen, wie eine Zusammenarbeit
-                aussehen kann.
-              </p>
+<section
+  id="kontakt"
+  className="bg-[#f3f7fb] px-4 pb-16 pt-0 min-[600px]:px-6 min-[600px]:pt-16 md:py-20"
+>
+  <div className="mx-auto max-w-[1600px] rounded-[34px] bg-[#145da0] p-6 text-white shadow-xl min-[600px]:p-10 sm:p-14">
+    <Reveal>
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-[0.28em] text-white/75">
+          Kontakt
+        </p>
 
- <div className="mt-8 grid gap-3 min-[600px]:mt-10 min-[600px]:gap-4 md:grid-cols-3">
-  <a
-    href="tel:01752063210"
-    className="group flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-4 py-4 text-white ring-1 ring-white/10 transition duration-300 hover:-translate-y-1 hover:bg-white/16 hover:ring-white/20 min-[600px]:px-5 min-[600px]:py-5"
-  >
-    <div className="min-w-0">
-      <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/60 min-[600px]:text-xs">
-        Telefon
-      </span>
-      <div className="mt-1 truncate text-[15px] font-semibold leading-tight text-white min-[600px]:text-base">
-        0175-2063210
-      </div>
-    </div>
+        <h2
+          className="mt-3 text-4xl font-semibold tracking-tight !text-white sm:text-5xl"
+          style={{ fontFamily: "var(--font-playfair)" }}
+        >
+          Interesse an einer Zusammenarbeit?
+        </h2>
 
-    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/12 text-sm font-semibold text-white transition group-hover:bg-white/20">
-      →
-    </span>
-  </a>
+        <p className="mt-4 max-w-2xl text-[15px] leading-[1.45] text-white/85 min-[600px]:text-lg min-[600px]:leading-8">
+          Ich freue mich über Ihre Anfrage und ein erstes persönliches Gespräch.
+          Gerne bespreche ich mit Ihnen, wie eine Zusammenarbeit aussehen kann.
+        </p>
 
-  <a
-    href="mailto:info@handelsvertretung-amend.de"
-    className="group flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-4 py-4 text-white ring-1 ring-white/10 transition duration-300 hover:-translate-y-1 hover:bg-white/16 hover:ring-white/20 min-[600px]:px-5 min-[600px]:py-5"
-  >
-    <div className="min-w-0">
-      <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/60 min-[600px]:text-xs">
-        E-Mail
-      </span>
-      <div className="mt-1 truncate text-[15px] font-semibold leading-tight text-white min-[600px]:text-base">
-        info@handelsvertretung-amend.de
-      </div>
-    </div>
-
-    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/12 text-sm font-semibold text-white transition group-hover:bg-white/20">
-      →
-    </span>
-  </a>
-
-  <div className="flex items-center justify-between gap-4 rounded-2xl bg-white/10 px-4 py-4 text-white ring-1 ring-white/10 transition duration-300 hover:-translate-y-1 hover:bg-white/16 hover:ring-white/20 min-[600px]:px-5 min-[600px]:py-5">
-    <div className="min-w-0">
-      <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/60 min-[600px]:text-xs">
-        Region
-      </span>
-      <div className="mt-1 truncate text-[15px] font-semibold leading-tight text-white min-[600px]:text-base">
-        Süd- und Westdeutschland
-      </div>
-    </div>
-
-    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/12 text-sm font-semibold text-white">
-      ✓
-    </span>
-  </div>
-</div>
+        <div className="mt-8 grid gap-3 min-[600px]:mt-10 min-[600px]:gap-4 md:grid-cols-3">
+          <a
+            href="tel:01752063210"
+            className="group flex items-center justify-between gap-3 overflow-hidden rounded-2xl bg-white/10 px-4 py-4 text-white ring-1 ring-white/10 transition duration-300 hover:-translate-y-1 hover:bg-white/16 hover:ring-white/20 min-[600px]:gap-4 min-[600px]:px-5 min-[600px]:py-5"
+          >
+            <div className="min-w-0">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/60 min-[600px]:text-xs">
+                Telefon
+              </span>
+              <div className="mt-1 truncate text-[15px] font-semibold leading-tight text-white min-[600px]:text-base">
+                0175-2063210
+              </div>
             </div>
-          </Reveal>
+
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/12 text-xs font-semibold text-white transition group-hover:bg-white/20 min-[600px]:h-9 min-[600px]:w-9 min-[600px]:text-sm">
+              →
+            </span>
+          </a>
+
+          <a
+            href="mailto:info@handelsvertretung-amend.de"
+            className="group flex items-center justify-between gap-3 overflow-hidden rounded-2xl bg-white/10 px-4 py-4 text-white ring-1 ring-white/10 transition duration-300 hover:-translate-y-1 hover:bg-white/16 hover:ring-white/20 min-[600px]:gap-4 min-[600px]:px-5 min-[600px]:py-5"
+          >
+            <div className="min-w-0">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/60 min-[600px]:text-xs">
+                E-Mail
+              </span>
+              <div className="mt-1 truncate text-[15px] font-semibold leading-tight text-white min-[600px]:text-base">
+                info@handelsvertretung-amend.de
+              </div>
+            </div>
+
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/12 text-xs font-semibold text-white transition group-hover:bg-white/20 min-[600px]:h-9 min-[600px]:w-9 min-[600px]:text-sm">
+              →
+            </span>
+          </a>
+
+          <div className="flex items-center justify-between gap-3 overflow-hidden rounded-2xl bg-white/10 px-4 py-4 text-white ring-1 ring-white/10 transition duration-300 hover:-translate-y-1 hover:bg-white/16 hover:ring-white/20 min-[600px]:gap-4 min-[600px]:px-5 min-[600px]:py-5">
+            <div className="min-w-0">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/60 min-[600px]:text-xs">
+                Region
+              </span>
+              <div className="mt-1 truncate text-[15px] font-semibold leading-tight text-white min-[600px]:text-base">
+                Süd- und Westdeutschland
+              </div>
+            </div>
+
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/12 text-xs font-semibold text-white min-[600px]:h-9 min-[600px]:w-9 min-[600px]:text-sm">
+              ✓
+            </span>
+          </div>
         </div>
-      </section>
+      </div>
+    </Reveal>
+  </div>
+</section>
 
       {activeImage && (
         <div
