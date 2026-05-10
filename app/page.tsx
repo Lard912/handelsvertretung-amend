@@ -185,7 +185,7 @@ export default function Home() {
 </section>
 
 
-      <section id="partner" className="bg-[#f6f7fb] px-4 py-24 min-[600px]:px-6">
+      <section id="partner" className="bg-[#f6f7fb] px-4 py-[60px] min-[600px]:px-6">
         <div className="mx-auto max-w-[1600px]">
           <Reveal>
             <div className="mb-16">
@@ -298,7 +298,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="profil" className="bg-white px-4 py-24 min-[600px]:px-6">
+      <section id="profil" className="bg-white px-4 py-[60px] min-[600px]:px-6">
         <div className="mx-auto grid max-w-[1600px] gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <Reveal>
             <div>
@@ -382,7 +382,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="sortiment" className="relative z-10 bg-[#f3f7fb] px-4 pb-[70px] pt-24 min-[600px]:px-6">
+      <section id="sortiment" className="relative z-10 bg-[#f3f7fb] px-4 py-[60px] min-[600px]:px-6">
         <div className="mx-auto max-w-[1600px]">
           <Reveal className="max-w-4xl">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
