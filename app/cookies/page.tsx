@@ -1,6 +1,12 @@
+"use client";
+
 export default function CookiesPage() {
+  const openCookieSettings = () => {
+    window.dispatchEvent(new Event("open-cookie-settings"));
+  };
+
   return (
-    <section className="bg-[#f5f5f3] px-6 py-20 min-h-[calc(100vh-120px)] flex items-center">
+    <section className="flex min-h-[calc(100vh-120px)] items-center bg-[#f5f5f3] px-6 py-20">
       <div className="mx-auto max-w-5xl rounded-[30px] border border-slate-200 bg-white p-8 shadow-sm sm:p-12">
         <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#145da0]">
           Rechtliches
@@ -12,6 +18,21 @@ export default function CookiesPage() {
         >
           Cookie-Hinweise
         </h1>
+
+        <div className="mt-8 rounded-2xl border border-[#145da0]/15 bg-[#f3f7fb] p-5">
+          <p className="text-[15px] leading-7 text-slate-600">
+            Sie können Ihre Cookie-Einstellungen jederzeit ändern und eine
+            erteilte Einwilligung mit Wirkung für die Zukunft widerrufen.
+          </p>
+
+          <button
+            type="button"
+            onClick={openCookieSettings}
+            className="mt-5 rounded-2xl bg-[#145da0] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-[#0f4c86]"
+          >
+            Cookie-Einstellungen ändern
+          </button>
+        </div>
 
         <div className="mt-10 space-y-8 text-base leading-8 text-slate-600">
           <div>
@@ -41,8 +62,8 @@ export default function CookiesPage() {
             <p className="mt-3">
               Technisch notwendige Cookies sind erforderlich, damit die Website
               ordnungsgemäß funktioniert. Dazu können zum Beispiel Cookies für
-              Warenkorb, Login, Spracheinstellungen, Cookie-Einstellungen,
-              Sicherheit oder die technische Bereitstellung der Website gehören.
+              Sicherheit, technische Bereitstellung oder die Speicherung Ihrer
+              Cookie-Einstellungen gehören.
             </p>
 
             <p className="mt-3">
@@ -60,20 +81,27 @@ export default function CookiesPage() {
 
           <div>
             <h2 className="text-xl font-semibold text-slate-900">
-              3. Funktionale Cookies
+              3. Funktionale Cookies und lokale Speicherung
             </h2>
 
             <p className="mt-3">
-              Funktionale Cookies können eingesetzt werden, um bestimmte
-              Einstellungen oder Funktionen zu speichern, zum Beispiel
-              Spracheinstellungen, Darstellungseinstellungen oder bereits
-              getroffene Auswahlentscheidungen.
+              Funktionale Speicherungen können eingesetzt werden, um bestimmte
+              Einstellungen oder Funktionen zu speichern, zum Beispiel bereits
+              getroffene Auswahlentscheidungen zu Cookie- oder
+              Datenschutzeinstellungen.
             </p>
 
             <p className="mt-3">
-              Soweit diese Cookies nicht zwingend erforderlich sind, erfolgt der
-              Einsatz nur auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1
-              lit. a DSGVO.
+              Für die Speicherung Ihrer Cookie-Auswahl kann diese Website den
+              lokalen Speicher Ihres Browsers verwenden. Dadurch merkt sich die
+              Website, ob Sie externe Inhalte oder optionale Funktionen erlaubt
+              haben.
+            </p>
+
+            <p className="mt-3">
+              Soweit diese Speicherungen nicht zwingend erforderlich sind,
+              erfolgt der Einsatz nur auf Grundlage Ihrer Einwilligung gemäß Art.
+              6 Abs. 1 lit. a DSGVO.
             </p>
           </div>
 
@@ -84,8 +112,8 @@ export default function CookiesPage() {
 
             <p className="mt-3">
               Analyse- und Statistik-Cookies helfen dabei zu verstehen, wie
-              Besucher unsere Website nutzen. Dadurch können wir die Website,
-              Inhalte und Nutzerführung verbessern.
+              Besucher eine Website nutzen. Dadurch können Inhalte,
+              Nutzerführung und technische Funktionen verbessert werden.
             </p>
 
             <p className="mt-3">
@@ -96,9 +124,8 @@ export default function CookiesPage() {
             </p>
 
             <p className="mt-3">
-              Wenn auf dieser Website derzeit kein Analyse-Tool aktiv ist,
-              werden keine Analyse- oder Statistik-Cookies zu diesem Zweck
-              gesetzt.
+              Auf dieser Website werden derzeit keine Analyse- oder
+              Statistik-Cookies zu diesem Zweck eingesetzt.
             </p>
           </div>
 
@@ -119,33 +146,32 @@ export default function CookiesPage() {
             </p>
 
             <p className="mt-3">
-              Wenn diese Website derzeit keine Tracking- oder Marketing-Cookies
-              verwendet, findet eine solche Verarbeitung nicht statt.
+              Auf dieser Website werden derzeit keine Tracking- oder
+              Marketing-Cookies eingesetzt.
             </p>
           </div>
 
           <div>
             <h2 className="text-xl font-semibold text-slate-900">
-              6. Cookies durch Shopify und technische Dienstleister
+              6. Externe Inhalte
             </h2>
 
             <p className="mt-3">
-              Sofern diese Website über Shopify oder vergleichbare technische
-              Dienstleister betrieben wird, können technisch notwendige Cookies
-              und ähnliche Technologien eingesetzt werden, damit grundlegende
-              Shop-Funktionen funktionieren.
+              Auf dieser Website können externe Inhalte eingebunden werden, zum
+              Beispiel Google Maps. Solche Inhalte werden nur geladen, wenn Sie
+              zuvor eingewilligt haben.
             </p>
 
             <p className="mt-3">
-              Dazu können insbesondere Funktionen wie Warenkorb,
-              Checkout-Prozess, Produktauswahl, Session-Verwaltung,
-              Sicherheit, Betrugsprävention oder die Speicherung Ihrer
-              Cookie-Auswahl gehören.
+              Beim Laden externer Inhalte können personenbezogene Daten,
+              insbesondere Ihre IP-Adresse, an den jeweiligen Anbieter
+              übertragen werden. Außerdem kann der jeweilige Anbieter eigene
+              Cookies oder vergleichbare Technologien einsetzen.
             </p>
 
             <p className="mt-3">
-              Die konkrete Verarbeitung richtet sich nach den tatsächlich auf
-              der Website eingesetzten Funktionen, Apps und Diensten.
+              Wenn Sie externe Inhalte nicht erlauben, werden diese Inhalte
+              blockiert und nicht automatisch geladen.
             </p>
           </div>
 
@@ -160,17 +186,16 @@ export default function CookiesPage() {
             </p>
 
             <p className="mt-3">
-              Falls auf dieser Website ein Cookie-Banner oder ein
-              Einstellungsbereich vorhanden ist, können Sie Ihre Auswahl dort
-              anpassen.
+              Nutzen Sie dazu den Button „Cookie-Einstellungen ändern“ auf
+              dieser Seite.
             </p>
 
             <p className="mt-3">
-              Zusätzlich können Sie Cookies in den Einstellungen Ihres Browsers
-              löschen, blockieren oder einschränken. Bitte beachten Sie, dass
-              bei einer vollständigen Deaktivierung von Cookies bestimmte
-              Funktionen der Website möglicherweise nur eingeschränkt nutzbar
-              sind.
+              Zusätzlich können Sie Cookies und lokal gespeicherte Daten in den
+              Einstellungen Ihres Browsers löschen, blockieren oder
+              einschränken. Bitte beachten Sie, dass bei einer vollständigen
+              Deaktivierung bestimmte Funktionen der Website möglicherweise nur
+              eingeschränkt nutzbar sind.
             </p>
           </div>
 
@@ -180,17 +205,17 @@ export default function CookiesPage() {
             </h2>
 
             <p className="mt-3">
-              Die Speicherdauer von Cookies hängt vom jeweiligen Cookie ab.
-              Session-Cookies werden in der Regel nach Ende der Browsersitzung
-              gelöscht. Permanente Cookies können darüber hinaus gespeichert
+              Die Speicherdauer von Cookies hängt vom jeweiligen Cookie oder der
+              jeweiligen lokalen Speicherung ab. Session-Cookies werden in der
+              Regel nach Ende der Browsersitzung gelöscht. Permanente Cookies
+              oder lokale Speicherungen können darüber hinaus gespeichert
               bleiben, bis sie automatisch ablaufen oder von Ihnen gelöscht
               werden.
             </p>
 
             <p className="mt-3">
-              Soweit Cookies auf Grundlage einer Einwilligung gesetzt werden,
-              richtet sich die Speicherdauer nach dem jeweiligen Dienst und der
-              von Ihnen getroffenen Auswahl.
+              Ihre Cookie-Auswahl bleibt gespeichert, bis Sie diese Auswahl
+              ändern oder die gespeicherten Daten in Ihrem Browser löschen.
             </p>
           </div>
 
@@ -200,16 +225,17 @@ export default function CookiesPage() {
             </h2>
 
             <p className="mt-3">
-              Technisch notwendige Cookies werden auf Grundlage von Art. 6 Abs.
-              1 lit. f DSGVO eingesetzt, soweit sie zur Wahrung unserer
-              berechtigten Interessen an einer sicheren und funktionsfähigen
-              Website erforderlich sind.
+              Technisch notwendige Cookies und Speicherungen werden auf
+              Grundlage von Art. 6 Abs. 1 lit. f DSGVO eingesetzt, soweit sie
+              zur Wahrung unserer berechtigten Interessen an einer sicheren und
+              funktionsfähigen Website erforderlich sind.
             </p>
 
             <p className="mt-3">
-              Für nicht notwendige Cookies, insbesondere Analyse-, Statistik-,
-              Marketing- oder Tracking-Cookies, erfolgt die Verarbeitung auf
-              Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
+              Für nicht notwendige Cookies, externe Inhalte, Analyse-,
+              Statistik-, Marketing- oder Tracking-Funktionen erfolgt die
+              Verarbeitung auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1
+              lit. a DSGVO.
             </p>
           </div>
 
@@ -227,9 +253,7 @@ export default function CookiesPage() {
               .
             </p>
 
-            <p className="mt-3">
-              Stand: Mai 2026
-            </p>
+            <p className="mt-3">Stand: Mai 2026</p>
           </div>
         </div>
       </div>

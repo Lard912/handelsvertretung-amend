@@ -316,11 +316,7 @@ export default function Home() {
                 Seit vielen Jahren bin ich als Handelsvertreter in der
                 Souvenirbranche tätig. Dabei stehen für mich <strong>Vertrauen,
                 Verbindlichkeit und eine enge Zusammenarbeit mit meinen Partnern </strong>
-                im Mittelpunkt.
-              </p>
-
-              <p className="mt-4 text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8">
-                Mein Anspruch ist es, Produkte nicht nur zu vermitteln, sondern
+                im Mittelpunkt. Mein Anspruch ist es, Produkte nicht nur zu vermitteln, sondern
                 gemeinsam passende Sortimente, Märkte und Chancen zu erkennen und
                 langfristig zu entwickeln.
               </p>

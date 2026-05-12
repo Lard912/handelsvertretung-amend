@@ -245,7 +245,7 @@ export default function UeberMichPage() {
         <div className="pointer-events-none absolute right-0 top-0 h-72 w-72 rounded-full bg-sky-300/20 blur-3xl floating-delayed" />
 
         <div className="relative z-20 mx-auto grid w-full max-w-[1600px] gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <Reveal className="w-full max-w-[672px]">
+          <Reveal className="w-full max-w-none min-[1024px]:max-w-[672px]">
             <p className="inline-flex rounded-full border border-[#145da0]/10 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-[#145da0] backdrop-blur">
               Über mich
             </p>
@@ -352,108 +352,132 @@ export default function UeberMichPage() {
 
 <section
   className="bg-[#145da0] px-4 py-24 min-[600px]:px-6"
-        onTouchStart={handleArticleTouchStart}
-        onTouchMove={handleArticleTouchMove}
-        onTouchEnd={handleArticleTouchEnd}
-      >
-        <div className="mx-auto max-w-[1600px]">
-          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-            <Reveal>
-              <div className="relative">
-                <div className="absolute -left-4 top-10 h-[85%] w-[92%] rounded-[34px] bg-[#145da0]/8 blur-2xl floating-slow" />
+  onTouchStart={handleArticleTouchStart}
+  onTouchMove={handleArticleTouchMove}
+  onTouchEnd={handleArticleTouchEnd}
+>
+  <div className="mx-auto max-w-[1600px]">
+    <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+      <Reveal>
+        <div className="relative">
+          <div className="absolute -left-4 top-10 h-[85%] w-[92%] rounded-[34px] bg-[#145da0]/8 blur-2xl floating-slow" />
 
-                <button
-                  type="button"
-                  onClick={() => setArticleModalOpen(true)}
-                  className="group relative block w-full overflow-hidden rounded-[36px] border border-white/70 bg-white p-3 text-left shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(15,23,42,0.12)] focus:outline-none focus:ring-2 focus:ring-white/60"
-                  aria-label={`${selectedArticleSlide.buttonLabel}: ${selectedArticleSlide.title}`}
-                >
-                  <div className="aspect-[11/9] overflow-hidden rounded-[28px] bg-white">
-                    <img
-                      key={selectedArticleSlide.image}
-                      src={selectedArticleSlide.image}
-                      alt={selectedArticleSlide.imageAlt}
-                      onError={(event) => {
-                        event.currentTarget.src = "/Matthias_3.jpg";
-                      }}
-                      className="article-soft-fade block h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.02]"
+          <button
+            type="button"
+            onClick={() => setArticleModalOpen(true)}
+            className="group relative block w-full overflow-hidden rounded-[36px] border border-white/70 bg-white p-3 text-left shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(15,23,42,0.12)] focus:outline-none focus:ring-2 focus:ring-white/60"
+            aria-label={`${selectedArticleSlide.buttonLabel}: ${selectedArticleSlide.title}`}
+          >
+            <div className="aspect-[11/9] overflow-hidden rounded-[28px] bg-white">
+              <img
+                key={selectedArticleSlide.image}
+                src={selectedArticleSlide.image}
+                alt={selectedArticleSlide.imageAlt}
+                onError={(event) => {
+                  event.currentTarget.src = "/Matthias_3.jpg";
+                }}
+                className="article-soft-fade block h-full w-full object-cover object-center transition duration-700 group-hover:scale-[1.02]"
+              />
+            </div>
+
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/0 transition duration-300 group-hover:bg-black/15">
+              <span className="pointer-events-none translate-y-4 rounded-2xl bg-white/95 px-4 py-2 text-sm font-semibold text-slate-900 opacity-0 shadow-lg transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                {selectedArticleSlide.buttonLabel}
+              </span>
+            </div>
+          </button>
+        </div>
+      </Reveal>
+
+      <Reveal delay={120}>
+        <div key={selectedArticleSlide.title} className="article-soft-fade">
+          <div className="relative">
+            <div className="relative pr-16 min-[600px]:pr-20 lg:pr-0">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/75 min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
+                {selectedArticleSlide.eyebrow}
+              </p>
+
+              <div className="absolute right-0 top-1 flex items-center gap-3 min-[600px]:top-2 lg:hidden">
+                {articleSlides.map((slide, index) => {
+                  const isActive = index === activeArticleIndex;
+
+                  return (
+                    <button
+                      key={slide.title}
+                      type="button"
+                      onClick={() => setActiveArticleIndex(index)}
+                      className={`h-2.5 rounded-full transition-all duration-300 ease-in-out ${
+                        isActive
+                          ? "w-10 bg-white"
+                          : "w-2.5 bg-white/35 hover:bg-white/60"
+                      }`}
+                      aria-label={`Zu Abschnitt ${index + 1} wechseln`}
                     />
-                  </div>
-
-                  <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/0 transition duration-300 group-hover:bg-black/15">
-                    <span className="pointer-events-none translate-y-4 rounded-2xl bg-white/95 px-4 py-2 text-sm font-semibold text-slate-900 opacity-0 shadow-lg transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                      {selectedArticleSlide.buttonLabel}
-                    </span>
-                  </div>
-                </button>
+                  );
+                })}
               </div>
-            </Reveal>
+            </div>
 
-            <Reveal delay={120}>
-              <div key={selectedArticleSlide.title} className="article-soft-fade">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/75 min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
-                  {selectedArticleSlide.eyebrow}
-                </p>
+            <h2
+              className="mt-3 text-[26px] font-semibold leading-[1.05] tracking-tight !text-white min-[600px]:text-4xl sm:text-5xl"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              {selectedArticleSlide.title}
+            </h2>
+          </div>
 
-                <h2
-                  className="mt-3 text-3xl font-semibold leading-[1.05] tracking-tight !text-white min-[600px]:text-4xl sm:text-5xl"
-                  style={{ fontFamily: "var(--font-playfair)" }}
-                >
-                  {selectedArticleSlide.title}
-                </h2>
+          <div className="mt-8 space-y-5 text-[15px] leading-[1.45] text-white/85 min-[600px]:space-y-7 min-[600px]:text-lg min-[600px]:leading-8">
+            {selectedArticleSlide.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
 
-                <div className="mt-8 space-y-5 text-[15px] leading-[1.45] text-white/85 min-[600px]:space-y-7 min-[600px]:text-lg min-[600px]:leading-8">
-                  {selectedArticleSlide.paragraphs.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
-                </div>
+          <div className="mt-10 hidden flex-col items-start gap-5 lg:flex">
+            <div className="flex items-center gap-3">
+              {articleSlides.map((slide, index) => {
+                const isActive = index === activeArticleIndex;
 
-                <div className="mt-10 flex flex-col items-start gap-5">
-                  <div className="flex items-center gap-3">
-                    {articleSlides.map((slide, index) => {
-                      const isActive = index === activeArticleIndex;
+                return (
+                  <button
+                    key={slide.title}
+                    type="button"
+                    onClick={() => setActiveArticleIndex(index)}
+                    className={`h-2.5 rounded-full transition-all duration-300 ease-in-out ${
+                      isActive
+                        ? "w-10 bg-white"
+                        : "w-2.5 bg-white/35 hover:bg-white/60"
+                    }`}
+                    aria-label={`Zu Abschnitt ${index + 1} wechseln`}
+                  />
+                );
+              })}
+            </div>
 
-                      return (
-                        <button
-                          key={slide.title}
-                          type="button"
-                          onClick={() => setActiveArticleIndex(index)}
-                          className={`h-2.5 rounded-full transition-all duration-300 ease-in-out ${
-                            isActive
-                              ? "w-10 bg-white"
-                              : "w-2.5 bg-white/35 hover:bg-white/60"
-                          }`}
-                          aria-label={`Zu Abschnitt ${index + 1} wechseln`}
-                        />
-                      );
-                    })}
-                  </div>
+            <div className="flex items-center gap-3">
+              <button
+                type="button"
+                onClick={goToPreviousArticle}
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-xl font-semibold text-white transition duration-300 ease-in-out hover:bg-white hover:text-[#145da0]"
+                aria-label="Vorheriger Abschnitt"
+              >
+                ‹
+              </button>
 
-                  <div className="flex items-center gap-3">
-                    <button
-                      type="button"
-                      onClick={goToPreviousArticle}
-                      className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-xl font-semibold text-white transition duration-300 ease-in-out hover:bg-white hover:text-[#145da0]"
-                      aria-label="Vorheriger Abschnitt"
-                    >
-                      ‹
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={goToNextArticle}
-                      className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-xl font-semibold text-white transition duration-300 ease-in-out hover:bg-white hover:text-[#145da0]"
-                      aria-label="Nächster Abschnitt"
-                    >
-                      ›
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </Reveal>
+              <button
+                type="button"
+                onClick={goToNextArticle}
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-xl font-semibold text-white transition duration-300 ease-in-out hover:bg-white hover:text-[#145da0]"
+                aria-label="Nächster Abschnitt"
+              >
+                ›
+              </button>
+            </div>
           </div>
         </div>
-      </section>
+      </Reveal>
+    </div>
+  </div>
+</section>
 
       <section className="bg-[#fcfcfd] px-4 py-16 min-[600px]:px-6 md:py-20">
         <div className="mx-auto max-w-[1600px]">

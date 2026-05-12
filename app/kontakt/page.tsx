@@ -103,7 +103,7 @@ export default function KontaktPage() {
         <div className="absolute bottom-0 left-1/3 h-40 w-40 rounded-full bg-sky-200/10 blur-3xl floating-slow" />
 
         <div className="relative mx-auto grid w-full max-w-[1600px] gap-8 min-[600px]:gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <Reveal className="max-w-4xl">
+          <Reveal className="w-full max-w-none lg:max-w-4xl">
             <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white/80 backdrop-blur min-[600px]:tracking-[0.28em]">
               Kontakt
             </p>
@@ -117,13 +117,13 @@ export default function KontaktPage() {
               Kontakt auf.
             </h1>
 
-            <p className="mt-7 max-w-2xl text-[15px] leading-[1.45] text-white/80 min-[600px]:text-lg min-[600px]:leading-8 sm:text-xl">
+            <p className="mt-7 w-full max-w-none text-[15px] leading-[1.45] text-white/80 min-[600px]:text-lg min-[600px]:leading-8 sm:text-xl lg:max-w-2xl">
               Ich freue mich über Ihre Anfrage und ein erstes persönliches
               Gespräch. Ob Sortiment, Zusammenarbeit oder allgemeine Fragen –
               schreiben Sie mir gerne direkt.
             </p>
 
-            <div className="mt-8 grid max-w-2xl grid-cols-3 gap-3 min-[600px]:mt-10 min-[600px]:gap-4">
+            <div className="mt-8 grid w-full max-w-none grid-cols-3 gap-3 min-[600px]:mt-10 min-[600px]:gap-4 lg:max-w-2xl">
               {[
                 { value: "Direkt", label: "Persönlicher Kontakt" },
                 { value: "Schnell", label: "Kurze Wege" },
@@ -148,8 +148,8 @@ export default function KontaktPage() {
             </div>
           </Reveal>
 
-          <Reveal delay={150}>
-            <div className="relative ml-auto w-full max-w-2xl">
+<Reveal delay={150} className="w-full">
+  <div className="relative w-full max-w-none lg:ml-auto lg:max-w-2xl">
               <div className="absolute inset-0 rounded-[32px] bg-white/10 blur-2xl min-[600px]:rounded-[38px]" />
 
               <div className="relative rounded-[32px] border border-white/15 bg-white/10 p-3 shadow-[0_24px_70px_rgba(20,93,160,0.22)] backdrop-blur-xl min-[600px]:rounded-[38px] min-[600px]:p-5">
@@ -440,7 +440,7 @@ export default function KontaktPage() {
                   </p>
                 </div>
 
-                <div className="grid gap-3 min-[420px]:grid-cols-2 lg:flex lg:flex-wrap">
+                <div className="grid gap-3 min-[420px]:grid-cols-2 lg:w-[420px] lg:justify-self-end min-[1400px]:w-auto min-[1400px]:flex min-[1400px]:flex-wrap">
                   <a
                     href={`tel:${contactData.phone.replace(/\s+/g, "")}`}
                     className="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-xs font-semibold text-[#145da0] shadow-xl transition duration-300 hover:shadow-2xl min-[600px]:px-6 min-[600px]:py-4 min-[600px]:text-sm"
@@ -458,7 +458,7 @@ export default function KontaktPage() {
                   <button
                     type="button"
                     onClick={downloadVCard}
-                    className="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/10 px-5 py-3 text-xs font-semibold text-white backdrop-blur transition duration-300 hover:bg-white/15 min-[420px]:col-span-2 min-[600px]:px-6 min-[600px]:py-4 min-[600px]:text-sm lg:col-span-1"
+                    className="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/10 px-5 py-3 text-xs font-semibold text-white backdrop-blur transition duration-300 hover:bg-white/15 min-[420px]:col-span-2 min-[600px]:px-6 min-[600px]:py-4 min-[600px]:text-sm min-[1400px]:col-span-1"
                   >
                     Kontakt speichern
                   </button>
