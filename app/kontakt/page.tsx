@@ -96,8 +96,8 @@ export default function KontaktPage() {
 
   return (
     <main className="min-h-screen bg-[#f6f7fb] text-slate-900 selection:bg-[#145da0] selection:text-white">
-<section className="relative isolate flex min-h-[calc(100vh-80px)] items-center overflow-hidden bg-[#0d3b66] px-4 py-12 text-white min-[600px]:px-6 min-[600px]:py-20">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.16),transparent_24%),radial-gradient(circle_at_85%_20%,rgba(125,211,252,0.18),transparent_24%),linear-gradient(135deg,#0d3b66_0%,#145da0_55%,#1c7ed6_100%)]" />
+<section className="relative isolate flex min-h-[calc(100vh-80px)] items-center overflow-hidden bg-[#0d3b66] px-4 pb-12 pt-4 text-white min-[600px]:px-6 min-[600px]:py-20">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.16),transparent_24%),radial-gradient(circle_at_85%_20%,rgba(125,211,252,0.18),transparent_24%),linear-gradient(135deg,#0d3b66_0%,#145da0_55%,#1c7ed6_100%)]" />
         <div className="absolute -left-10 top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl floating" />
         <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-cyan-300/10 blur-3xl floating-delayed" />
         <div className="absolute bottom-0 left-1/3 h-40 w-40 rounded-full bg-sky-200/10 blur-3xl floating-slow" />

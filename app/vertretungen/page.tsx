@@ -201,8 +201,8 @@ export default function VertretungenPage() {
     <main
       className={`${inter.variable} ${playfair.variable} min-h-screen bg-[#f6f7fb] text-slate-900 selection:bg-[#145da0] selection:text-white`}
     >
-<section className="relative isolate flex min-h-[calc(100vh-80px)] items-center overflow-hidden bg-[#0d3b66] px-4 py-20 text-white min-[600px]:px-6 lg:min-h-[calc(100svh-96px)] lg:py-5">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.18),transparent_25%),radial-gradient(circle_at_20%_20%,rgba(56,189,248,0.20),transparent_28%),linear-gradient(135deg,#0d3b66_0%,#145da0_55%,#1c7ed6_100%)]" />
+<section className="relative isolate flex min-h-[calc(100vh-80px)] items-center overflow-hidden bg-[#0d3b66] px-4 pb-20 pt-4 text-white min-[600px]:px-6 min-[600px]:py-20 lg:min-h-[calc(100svh-96px)] lg:py-5">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.18),transparent_25%),radial-gradient(circle_at_20%_20%,rgba(56,189,248,0.20),transparent_28%),linear-gradient(135deg,#0d3b66_0%,#145da0_55%,#1c7ed6_100%)]" />
         <div className="absolute -left-12 top-20 h-56 w-56 rounded-full bg-white/10 blur-3xl floating" />
         <div className="absolute right-0 top-10 h-72 w-72 rounded-full bg-cyan-300/10 blur-3xl floating-delayed" />
         <div className="absolute bottom-0 left-1/3 h-40 w-40 rounded-full bg-sky-200/10 blur-3xl floating-slow" />

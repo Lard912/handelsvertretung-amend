@@ -239,7 +239,7 @@ export default function UeberMichPage() {
 
   return (
     <main className="min-h-screen bg-[#f6f7fb] text-slate-900 selection:bg-[#145da0] selection:text-white">
-      <section className="relative isolate min-h-[90vh] overflow-hidden bg-[linear-gradient(135deg,#f8fbff_0%,#edf4fb_45%,#e6eef8_100%)] px-4 pb-16 pt-16 sm:pt-20 min-[600px]:px-6 min-[1024px]:flex min-[1024px]:items-center min-[1024px]:pb-20 min-[1024px]:pt-10">
+      <section className="relative isolate min-h-[90vh] overflow-hidden bg-[linear-gradient(135deg,#f8fbff_0%,#edf4fb_45%,#e6eef8_100%)] px-4 pb-16 pt-4 sm:pt-4 min-[600px]:px-6 min-[600px]:pt-20 min-[1024px]:flex min-[1024px]:items-center min-[1024px]:pb-20 min-[1024px]:pt-10">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(20,93,160,0.12),transparent_28%),radial-gradient(circle_at_85%_20%,rgba(59,130,246,0.10),transparent_24%)]" />
         <div className="pointer-events-none absolute -left-8 top-20 h-56 w-56 rounded-full bg-[#145da0]/10 blur-3xl floating" />
         <div className="pointer-events-none absolute right-0 top-0 h-72 w-72 rounded-full bg-sky-300/20 blur-3xl floating-delayed" />
