@@ -115,7 +115,7 @@ export default function Home() {
   }, [activeImageIndex]);
 
   return (
-    <>
+    <main className="bg-[#f6f7fb] text-slate-900 selection:bg-[#145da0] selection:text-white">
 <section className="relative flex min-h-[calc(100vh-80px)] items-center overflow-hidden bg-[#145da0] bg-[linear-gradient(135deg,#0d3b66_0%,#145da0_60%,#1c7ed6_100%)] pb-10 pt-4 text-white min-[600px]:py-20 md:min-h-[calc(100vh-88px)]">
   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,59,102,0.92)_0%,rgba(20,93,160,0.88)_45%,rgba(28,126,214,0.82)_100%)] md:bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.10),transparent_22%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.08),transparent_18%),radial-gradient(circle_at_50%_100%,rgba(56,189,248,0.18),transparent_24%)]" />
   <div className="absolute -left-10 top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl floating" />
@@ -666,6 +666,6 @@ export default function Home() {
           }
         }
       `}</style>
-    </>
+    </main>
   );
 }
