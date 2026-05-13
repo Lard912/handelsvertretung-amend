@@ -27,7 +27,6 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#f5f5f3",
 };
 
 export default function RootLayout({
@@ -36,13 +35,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="de" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="min-h-[100svh] bg-[#f5f5f3] text-slate-900 antialiased">
+    <html lang="de">
+      <body
+        className={`${inter.variable} ${playfair.variable} min-h-[100lvh] bg-[#f5f5f3] text-slate-900`}
+        style={{ fontFamily: "var(--font-inter)" }}
+      >
         <ScrollToTop />
 
-        <div className="flex min-h-[100svh] flex-col bg-transparent">
+        <div className="flex min-h-[100lvh] flex-col">
           <HeaderTemp />
-          <main className="flex-1 bg-transparent">{children}</main>
+          <main className="flex-1">{children}</main>
           <FooterTemp />
           <CookieBar />
         </div>

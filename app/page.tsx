@@ -115,8 +115,8 @@ export default function Home() {
   }, [activeImageIndex]);
 
   return (
-<main className="text-slate-900 selection:bg-[#145da0] selection:text-white">
-  <section className="relative flex min-h-[calc(100vh-80px)] items-center overflow-hidden bg-[#145da0] bg-[linear-gradient(135deg,#0d3b66_0%,#145da0_60%,#1c7ed6_100%)] pb-10 pt-4 text-white min-[600px]:py-20 md:min-h-[calc(100vh-88px)]">
+    <main className="bg-[#f6f7fb] text-slate-900 selection:bg-[#145da0] selection:text-white">
+<section className="relative flex min-h-[calc(100vh-80px)] items-center overflow-hidden bg-[#145da0] bg-[linear-gradient(135deg,#0d3b66_0%,#145da0_60%,#1c7ed6_100%)] pb-10 pt-4 text-white min-[600px]:py-20 md:min-h-[calc(100vh-88px)]">
   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,59,102,0.92)_0%,rgba(20,93,160,0.88)_45%,rgba(28,126,214,0.82)_100%)] md:bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.10),transparent_22%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.08),transparent_18%),radial-gradient(circle_at_50%_100%,rgba(56,189,248,0.18),transparent_24%)]" />
   <div className="absolute -left-10 top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl floating" />
   <div className="absolute right-0 top-10 h-72 w-72 rounded-full bg-cyan-300/10 blur-3xl floating-delayed" />
@@ -185,7 +185,7 @@ export default function Home() {
 </section>
 
 
-      <section id="partner" className="px-4 py-[60px] min-[600px]:px-6">
+      <section id="partner" className="bg-[#f6f7fb] px-4 py-[60px] min-[600px]:px-6">
         <div className="mx-auto max-w-[1600px]">
           <Reveal>
             <div className="mx-auto mb-16 max-w-4xl text-center">
@@ -298,7 +298,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="profil" className="px-4 py-[60px] min-[600px]:px-6">
+      <section id="profil" className="bg-white px-4 py-[60px] min-[600px]:px-6">
         <div className="mx-auto grid max-w-[1600px] gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <Reveal>
             <div>
@@ -378,7 +378,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="sortiment" className="relative z-10 px-4 py-[60px] min-[600px]:px-6">
+      <section id="sortiment" className="relative z-10 bg-[#f3f7fb] px-4 py-[60px] min-[600px]:px-6">
         <div className="mx-auto max-w-[1600px]">
           <Reveal className="max-w-4xl">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
@@ -431,7 +431,10 @@ export default function Home() {
         </div>
       </section>
 
-<section id="kontakt" className="px-4 pb-16 pt-0 min-[600px]:px-6 min-[600px]:pt-16 md:py-20">
+<section
+  id="kontakt"
+  className="bg-[#f3f7fb] px-4 pb-16 pt-0 min-[600px]:px-6 min-[600px]:pt-16 md:py-20"
+>
   <div className="mx-auto max-w-[1600px] rounded-[34px] bg-[#145da0] p-6 text-white shadow-xl min-[600px]:p-10 sm:p-14">
     <Reveal>
       <div>
