@@ -104,7 +104,7 @@ export default function KontaktPage() {
 
         <div className="relative mx-auto grid w-full max-w-[1600px] gap-8 min-[600px]:gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <Reveal className="w-full max-w-none lg:max-w-4xl">
-            <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-white/80 backdrop-blur min-[600px]:tracking-[0.28em]">
+        <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/80 backdrop-blur min-[600px]:px-4 min-[600px]:py-2 min-[600px]:text-xs min-[600px]:tracking-[0.28em]">
               Kontakt
             </p>
 
