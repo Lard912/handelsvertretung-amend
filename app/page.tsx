@@ -116,11 +116,12 @@ export default function Home() {
 
   return (
     <>
-<section className="relative flex min-h-[calc(100vh-80px)] items-center overflow-hidden bg-[#145da0] bg-[linear-gradient(135deg,#0d3b66_0%,#145da0_60%,#1c7ed6_100%)] py-10 text-white min-[600px]:py-20 md:min-h-[calc(100vh-88px)]">
-<div className="absolute inset-0 bg-[linear-gradient(180deg,#145da0_0%,#145da0_38%,#1c7ed6_100%)] md:bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.10),transparent_22%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.08),transparent_18%),radial-gradient(circle_at_50%_100%,rgba(56,189,248,0.18),transparent_24%)]" />  <div className="absolute -left-10 top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl floating" />
+<section className="relative flex min-h-0 items-start overflow-hidden bg-[#145da0] bg-[linear-gradient(135deg,#0d3b66_0%,#145da0_60%,#1c7ed6_100%)] pb-10 pt-6 text-white min-[600px]:min-h-[calc(100vh-80px)] min-[600px]:items-center min-[600px]:py-20 md:min-h-[calc(100vh-88px)]">
+  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(13,59,102,0.92)_0%,rgba(20,93,160,0.88)_45%,rgba(28,126,214,0.82)_100%)] md:bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.10),transparent_22%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.08),transparent_18%),radial-gradient(circle_at_50%_100%,rgba(56,189,248,0.18),transparent_24%)]" />
+  <div className="absolute -left-10 top-16 h-56 w-56 rounded-full bg-white/10 blur-3xl floating" />
   <div className="absolute right-0 top-10 h-72 w-72 rounded-full bg-cyan-300/10 blur-3xl floating-delayed" />
 
-<div className="relative grid w-full items-center gap-6 px-4 min-[600px]:px-6 min-[1648px]:mx-auto min-[1648px]:w-[1600px] min-[1648px]:px-0 md:-mt-10 md:grid-cols-[1.05fr_0.95fr] md:gap-10 lg:gap-14">    <Reveal>
+<div className="relative grid w-full items-start gap-6 px-4 min-[600px]:items-center min-[600px]:px-6 min-[1648px]:mx-auto min-[1648px]:w-[1600px] min-[1648px]:px-0 md:-mt-10 md:grid-cols-[1.05fr_0.95fr] md:gap-10 lg:gap-14">    <Reveal>
       <div className="max-w-3xl">
         <p className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/80 backdrop-blur min-[600px]:px-4 min-[600px]:py-2 min-[600px]:text-xs min-[600px]:tracking-[0.28em]">
           seit 2000
