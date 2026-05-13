@@ -188,7 +188,7 @@ export default function Home() {
       <section id="partner" className="bg-[#f6f7fb] px-4 py-[60px] min-[600px]:px-6">
         <div className="mx-auto max-w-[1600px]">
           <Reveal>
-            <div className="mb-16">
+            <div className="mx-auto mb-16 max-w-4xl text-center">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#145da0] min-[600px]:text-sm min-[600px]:tracking-[0.28em]">
                 Aktuelle Vertretungen
               </p>
@@ -200,7 +200,7 @@ export default function Home() {
                 Meine Partner
               </h2>
 
-              <p className="mt-5 max-w-3xl text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8">
+              <p className="mx-auto mt-5 max-w-3xl text-[15px] leading-[1.45] text-slate-600 min-[600px]:text-lg min-[600px]:leading-8">
                 Zuverlässige Partnerschaften mit einem Sortiment, das auf
                 Märkte, Standorte und Verkaufschancen abgestimmt ist.
               </p>
