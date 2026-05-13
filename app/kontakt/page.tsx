@@ -440,7 +440,7 @@ export default function KontaktPage() {
                   </p>
                 </div>
 
-                <div className="grid gap-3 min-[420px]:grid-cols-2 lg:w-[420px] lg:justify-self-end min-[1400px]:flex min-[1400px]:w-auto min-[1400px]:flex-nowrap">
+                <div className="grid gap-3 min-[420px]:grid-cols-2 lg:w-[420px] lg:justify-self-end min-[1400px]:flex min-[1400px]:w-auto min-[1400px]:min-w-max min-[1400px]:flex-nowrap">
                   <a
                     href={`tel:${contactData.phone.replace(/\s+/g, "")}`}
                     className="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-xs font-semibold text-[#145da0] shadow-xl transition duration-300 hover:shadow-2xl min-[600px]:px-6 min-[600px]:py-4 min-[600px]:text-sm"
@@ -458,7 +458,7 @@ export default function KontaktPage() {
                   <button
                     type="button"
                     onClick={downloadVCard}
-                    className="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/10 px-5 py-3 text-xs font-semibold text-white backdrop-blur transition duration-300 hover:bg-white/15 min-[420px]:col-span-2 min-[1400px]:col-span-1 min-[600px]:px-6 min-[600px]:py-4 min-[600px]:text-sm min-[1400px]:col-span-1"
+                    className="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/10 px-5 py-3 text-xs font-semibold text-white backdrop-blur transition duration-300 hover:bg-white/15 min-[420px]:col-span-2 min-[600px]:px-6 min-[600px]:py-4 min-[600px]:text-sm min-[1400px]:col-span-1"
                   >
                     Kontakt speichern
                   </button>
