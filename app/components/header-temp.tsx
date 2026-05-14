@@ -74,7 +74,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 border-b border-white/10 bg-[#145da0] shadow-[0_8px_30px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-transform duration-300 ease-out min-[600px]:translate-y-0 ${
+        className={`sticky top-0 z-50 border-b border-white/10 bg-[#145da0] shadow-[0_8px_30px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-transform duration-500 ease-in-out min-[600px]:translate-y-0 ${
           showHeader ? "translate-y-0" : "-translate-y-full"
         }`}
       >

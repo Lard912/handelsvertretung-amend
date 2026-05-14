@@ -28,7 +28,7 @@ const partners = [
     image: "/logo_amend.png",
     alt: "Amend Souvenir",
     short:
-      "Amend Souvenir produziert und vertreibt ein breites Sortiment an Souvenirartikeln.",
+      "Händler für Souvenirartikel im Bereich Süd-West Deutschland mit starkem Fokus auf Frankfurt, Heidelberg, Köln & München.",
     full:
       "Amend Souvenir produziert und vertreibt ein breites Sortiment an Souvenirartikeln – von Magneten und Schlüsselanhängern bis zu Autoschildern, Bierkrügen und Kuckucksuhren.",
   },
@@ -37,7 +37,7 @@ const partners = [
     image: "/logo_smile.png",
     alt: "Smile Originals",
     short:
-      "Smile Originals ist ein etabliertes Unternehmen mit Sortimenten im Bereich Souvenir und Textil.",
+      "Händler für Souvenir- und Textilprodukte mit Fokus auf Großstädte in Deutschland, Österreich, Spanien und Schweiz.",
     full:
       "Mit starker Marktpräsenz und passendem Großhandelsbezug ist das Unternehmen auch auf dem deutschen Markt aktiv und bietet interessante Sortimente für unterschiedliche Standorte.",
   },
