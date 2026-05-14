@@ -27,6 +27,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
+  themeColor: "#f5f5f3",
 };
 
 export default function RootLayout({
@@ -42,7 +43,7 @@ export default function RootLayout({
       >
         <ScrollToTop />
 
-        <div className="flex min-h-[100lvh] flex-col">
+        <div className="flex min-h-[100dvh] flex-col">
           <HeaderTemp />
           <main className="flex-1">{children}</main>
           <FooterTemp />

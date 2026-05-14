@@ -74,9 +74,9 @@ export default function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 border-b border-white/10 bg-[#145da0] shadow-[0_8px_30px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-transform duration-500 ease-in-out min-[600px]:translate-y-0 ${
-          showHeader ? "translate-y-0" : "-translate-y-full"
-        }`}
+className={`sticky top-0 z-50 border-b border-white/20 bg-white/55 shadow-[0_8px_30px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-transform duration-500 ease-in-out min-[600px]:translate-y-0 min-[1000px]:bg-[#145da0] min-[1000px]:border-white/10 ${
+  showHeader ? "translate-y-0" : "-translate-y-full"
+}`}
       >
         <div className="mx-auto flex h-20 max-w-[1650px] items-center justify-between px-4 py-0 min-[600px]:px-6 md:h-auto md:py-4">
           <Link
@@ -124,7 +124,7 @@ export default function Header() {
 
           <button
             onClick={() => setMobileOpen(true)}
-            className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white transition hover:bg-white/15 min-[1000px]:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-900/10 text-slate-900 transition hover:bg-slate-900/15 min-[1000px]:hidden"
             aria-label="Menü öffnen"
           >
             ☰
