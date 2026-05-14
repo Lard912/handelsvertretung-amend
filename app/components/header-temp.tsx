@@ -74,7 +74,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 border-b border-white/10 bg-[#145da0] shadow-[0_8px_30px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-transform duration-500 ease-in-out min-[600px]:translate-y-0 ${
+        className={`sticky top-0 z-50 border-b border-white/10 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.10),transparent_24%),radial-gradient(circle_at_85%_20%,rgba(125,211,252,0.16),transparent_24%),linear-gradient(135deg,#0d3b66_0%,#145da0_55%,#1c7ed6_100%)] shadow-[0_8px_30px_rgba(15,23,42,0.08)] backdrop-blur-xl transition-transform duration-500 ease-in-out min-[600px]:translate-y-0 ${
           showHeader ? "translate-y-0" : "-translate-y-full"
         }`}
       >
