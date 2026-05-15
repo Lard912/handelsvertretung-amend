@@ -132,62 +132,54 @@ export default function Header() {
         </div>
       </header>
 
-      <div
-        className={`fixed inset-0 z-[60] min-[1000px]:hidden ${
-          mobileOpen ? "pointer-events-auto" : "pointer-events-none"
-        }`}
-      >
-        <div
-          className={`absolute inset-0 bg-slate-950/35 transition duration-300 ${
-            mobileOpen ? "opacity-100" : "opacity-0"
-          }`}
-          onClick={() => setMobileOpen(false)}
-        />
+      {mobileOpen && (
+        <div className="fixed inset-0 z-[60] min-[1000px]:hidden">
+          <div
+            className="absolute inset-0 bg-slate-950/35"
+            onClick={() => setMobileOpen(false)}
+          />
 
-        <div
-          className={`absolute right-0 top-0 flex h-full w-full flex-col bg-[#145da0] shadow-[-20px_0_60px_rgba(15,23,42,0.22)] transition duration-300 ease-out min-[600px]:w-[88vw] min-[600px]:max-w-[360px] ${
-            mobileOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          <div className="flex h-20 items-center justify-between border-b border-white/10 px-4 min-[600px]:px-5">
-            <div
-              className="pl-1 text-2xl font-semibold leading-none text-white"
-              style={{ fontFamily: "var(--font-playfair)" }}
-            >
-              Menü
+          <div className="absolute right-0 top-0 flex h-full w-[88vw] max-w-[360px] flex-col bg-[#145da0] shadow-[-20px_0_60px_rgba(15,23,42,0.22)]">
+            <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
+              <div
+                className="pl-1 text-lg font-semibold text-white"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
+                Menü
+              </div>
+
+              <button
+                onClick={() => setMobileOpen(false)}
+                className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white transition hover:bg-white/15"
+                aria-label="Menü schließen"
+              >
+                ✕
+              </button>
             </div>
 
-            <button
-              onClick={() => setMobileOpen(false)}
-              className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white transition hover:bg-white/15"
-              aria-label="Menü schließen"
-            >
-              ✕
-            </button>
+            <nav className="flex flex-1 flex-col gap-2 px-5 py-5">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`rounded-2xl px-4 py-3.5 text-sm font-semibold transition ${
+                    isActive(item.href)
+                      ? item.href === "/kontakt"
+                        ? "bg-white text-[#145da0]"
+                        : "bg-white/15 text-white"
+                      : item.href === "/kontakt"
+                      ? "mt-2 bg-white text-[#145da0] shadow-lg"
+                      : "text-white/85 hover:bg-white/10 hover:text-white"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
           </div>
-
-          <nav className="flex flex-1 flex-col gap-2 px-5 py-5">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setMobileOpen(false)}
-                className={`rounded-2xl px-4 py-3.5 text-sm font-semibold transition ${
-                  isActive(item.href)
-                    ? item.href === "/kontakt"
-                      ? "bg-white text-[#145da0]"
-                      : "bg-white/15 text-white"
-                    : item.href === "/kontakt"
-                    ? "mt-2 bg-white text-[#145da0] shadow-lg"
-                    : "text-white/85 hover:bg-white/10 hover:text-white"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
         </div>
-      </div>
+      )}
     </>
   );
 }
