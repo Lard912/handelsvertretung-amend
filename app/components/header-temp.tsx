@@ -91,19 +91,10 @@ export default function Header() {
           className="group flex items-center gap-4 pl-1 min-[600px]:pl-0"
         >
           <img
-            src="/logo.png"
+            src="/logo_neu.png"
             alt="Handelsvertretung Amend"
             className="h-14 w-auto transition duration-300 group-hover:scale-105 min-[600px]:h-12 sm:h-14 md:h-16"
           />
-
-          <div className="hidden leading-none md:block">
-            <div
-              className="-mt-1 text-2xl font-semibold text-white min-[1000px]:text-[2.1rem]"
-              style={{ fontFamily: "var(--font-playfair)" }}
-            >
-              Handelsvertretung Amend
-            </div>
-          </div>
         </Link>
 
         <nav className="hidden items-center gap-2 min-[1000px]:flex">
